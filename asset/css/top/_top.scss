@@ -1,0 +1,1358 @@
+@charset "utf-8";
+@import "compass/css3/";
+
+.bg_wrap{
+    background: url(/asset/img/top/bg01.png);
+    background-size: 100%;
+}
+.base_btn{
+    width: max-content;
+    display: block;
+    color: $color01;
+    border: 1px solid $color01;
+    font-size: 1.4vw;
+    position: relative;
+    padding: 0.8vw 3.3vw 0.8vw 1.5vw;
+    @include bkp(sp){
+        font-size: 3vw;
+        padding: 1.5vw 5.4vw 1.5vw 2.9vw;
+    }
+    &::after{
+        content: ""; 
+        display: block;
+        position: absolute;
+        background: url(/asset/img/top/ico_arrow01.png)no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 0.7vw;
+        height: 1.4vw;
+        right: 1.3vw;
+        top: 50%;
+        transform: translate(0,-50%);  
+        @include bkp(sp){
+            width: 1.3vw;
+            height: 2.7vw;
+            right: 2.7vw;
+        }     
+    }
+}
+.deco_wrap{
+    position: relative;
+    overflow: hidden;
+    &_img{
+        width: 144%;
+        position: absolute;
+        right: -15.1%;
+        top: -11.4vw;
+        z-index: 1;
+    }
+}
+.sec_ttl{
+    font-size: 7.1vw;
+    color: $color01;
+    font-family: $ff;
+    font-weight: normal;
+    letter-spacing: 5px;
+    @include bkp(sp){
+        font-size: 9.6vw;
+    }
+    &_subtxt{
+        position: relative;
+        font-family: $ff02;
+        font-size: 1.429vw;
+        letter-spacing: 3px;
+        width: max-content;
+        display: block;
+        margin-bottom: 1.4vw;
+        @include bkp(sp){
+            font-size: 3vw;
+            letter-spacing: 2px;
+            margin-bottom: 2.6vw;
+        }
+        &::after{
+            content: ""; 
+            display: block;
+            position: absolute;
+            width: 18vw;
+            height: 1px;
+            right: -19.3vw;
+            top: 50%;
+            transform: translate(0,-50%);            
+            background-color: $color01;
+            @include bkp(sp){
+                display: none;
+            }
+        }
+    }
+}
+.top {
+    &__mv{
+        position: relative;
+        &__img{
+            img{
+                height: 100vh;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        &__txt{
+            width: 6.8vw;
+            position: absolute;
+            top: 9.6vw;
+            right: 21.4vw;
+            @include bkp(sp){
+                width: 16vw;
+                top: 32.5vw;
+                right: 26.1vw;
+            }
+        }
+        &__scroll{
+            position: absolute;
+            color: white;
+            font-family: $ff;
+            left: 50%;
+            transform: translate(-50%,0);
+            bottom: 9.6vw;
+            font-size: 0.9vw;
+            letter-spacing: 1px;
+            @include bkp(sp){
+                font-size: 1.7vw;
+                bottom: 31.6vw;
+            }
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                background-color: rgba(0, 0, 0, 0.3);
+                filter: blur(35px);
+                z-index: -1;
+            }
+        }
+        &__contact{
+            position: absolute;
+            top: 50%;
+            right: 3.9vw;
+            z-index: 2;
+            transform: translate(0,-50%);
+            &__txt{
+                margin: auto;
+                writing-mode:vertical-rl;
+                color: white;
+                letter-spacing: 6px;
+                font-size: 1.4vw;
+                @include bkp(sp){
+                    font-size: 3.2vw;
+                }
+            }
+            &__link{
+                width: 2.3vw;
+                display: block;
+                margin-top: 1.3vw;
+                @include bkp(sp){
+                    width: 4.8vw;
+                    margin-top: 2.5vw;
+                }
+                &:nth-of-type(2){
+                    margin-top: 1vw;
+                    @include bkp(sp){
+                        margin-top: 2vw;
+                    }
+                }
+            }
+        }
+    }
+    &__concept{
+        background: url(/asset/img/top/bg_concept01.png)no-repeat;
+        background-size: cover;
+        padding: 5.7vw 0;
+        @include bkp(sp){
+            background: url(/asset/img/top/bg_concept01_sp.png)no-repeat;
+            background-size: cover;
+            padding: 18vw 0;
+        }
+        &__txtbox{
+            width: 54%;
+            margin: 0 auto;
+            position: relative;
+            color: white;
+            @include bkp(sp){
+                width: 76%;
+                min-width: 308px;
+            }
+            &__ttl{
+                @include bkp(pc){
+                    position: absolute;
+                    writing-mode: vertical-rl;
+                    left: -0.7vw;
+                    top: 3.6vw;
+                }
+                font-weight: normal;
+                font-size: 1.4vw;
+                letter-spacing: 3px;
+                font-family: $ff;
+                @include bkp(sp){
+                    padding-left: 6.6vw;
+                    position: relative;
+                    font-size: 3.2vw;
+                }
+                &:after{
+                    @include bkp(sp){
+                        content: ""; 
+                        display: block;
+                        position: absolute;
+                        width:4.4vw;
+                        height: 0.1vw;
+                        left: 0;
+                        top: 50%;
+                        background-color: white;
+                        transform: translate(0,-50%);
+                    }
+                }
+            }
+            &__txt{
+                font-size: 1.4vw;
+                line-height: 2;
+                letter-spacing: 2px;
+                @include bkp(pc){
+                    padding-left: 3.6vw;
+                }
+                @include bkp(sp){
+                    font-size: 3.2vw;
+                    margin-top: 10vw;
+                }
+                .strong{
+                    font-size: 1.8vw;
+                    font-weight: 600;
+                    @include bkp(sp){
+                        font-size: 5.3vw;
+                    }
+                }
+            }
+        }
+    }
+    &__vision{
+        padding: 8.9vw 0 7.9vw;
+        @include bkp(sp){
+            padding: 12vw 0 16vw;
+        }
+        &__txtbox{
+            position: relative;
+            padding-left: 10%;
+            @include bkp(sp){
+              padding: 0;
+            }
+            &__img{
+                @include bkp(pc){
+                    position: absolute;
+                    right: 0;
+                    top: 45%;
+                    transform: translate(0,-50%);
+                    width: 52vw;
+                }
+                @include bkp(sp){
+                    padding:0 0 0 12%;
+                    margin-top: 10vw;
+                }
+            }
+            &__ttl01{
+                width: max-content;
+                @include bkp(sp){
+                    padding:0 12%;
+                }
+            }
+            &__ttl02{
+                color: $color02;
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-size: 5.7vw;
+                line-height: 1.2;
+                width: max-content;
+                .small{
+                    font-size: 3.6vw;
+                }
+            }
+            &__ttl03{
+                display: none;
+                @include bkp(sp){
+                    display: block;
+                    writing-mode: vertical-rl;
+                    color: $color01;
+                    font-size: 6.2vw;
+                    position: absolute;
+                    right: 12%;
+                    font-weight: normal;
+                    top: 8.9vw;
+                    .bg_wht{
+                        height: max-content;
+                        display: block;
+                        background-color: white;
+                        padding: 2.5vw 1.5vw;
+                        margin-right: 1.7vw;
+                        letter-spacing: 2.5px;
+                        &:nth-of-type(1){
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            &__txt{
+                font-size: 1vw;
+                line-height: 1.9;
+                letter-spacing: 2px;
+                color: $color02;
+                margin: 1.5vw 0 3.9vw;
+                width: max-content;
+                @include bkp(sp){
+                    padding:0 12%;
+                    font-size: 3.2vw;
+                    margin-top: 6.7vw;
+                    width: 100%;
+                    letter-spacing: 1.5px;
+                }
+            }
+            .base_btn{
+                @include bkp(sp){
+                    margin:0 auto 0 12%;
+                }
+            }
+        }
+    }
+    &__achievement{
+        padding: 0 0 13.6vw;
+        @include bkp(sp){
+            padding: 0 12vw 15vw;
+        }
+       .sec_ttl{
+            text-align: right;
+            margin: 0 auto;
+            @include bkp(pc){
+                width: 80vw;
+            }
+            @include bkp(sp){
+                font-size: 7.3vw;
+                letter-spacing: 3px;
+            }
+            &_subtxt{
+                margin: 0 0 1.4vw auto;
+                @include bkp(sp){
+                    margin: 0 0 2.6vw auto;
+                }
+                &::after{
+                    width: 51.2vw;
+                    right: 12.8vw;
+                }
+            }
+       }
+       &__slidearea{
+            margin: 10.4vw auto 0;
+            position: relative;
+            @include bkp(sp){
+                margin: 15.5vw auto 0;
+            }
+            .slick-arrow{
+                width: 3.2vw;
+                @include bkp(sp){
+                    width: 5vw;
+                }
+                cursor: pointer;
+                top: -6.2vw;
+                @include bkp(sp){
+                    top:-8.5vw;
+                }
+                &.slick-prev{
+                    right: 15vw;
+                    @include bkp(sp){
+                        right: 7vw;
+                    }
+                }
+                &.slick-next{
+                    right: 10.2vw;
+                    @include bkp(sp){
+                        right: 0;
+                    }
+                }
+            }
+            &__counter{
+                position: absolute;
+                right: 20.3vw;
+                top: -6.4vw;
+                font-size: 3.2vw;
+                color: $color01;
+                letter-spacing: 1.3px;
+                display: flex;
+                align-items: center;
+                @include bkp(sp){
+                    font-size: 3.7vw;
+                    right: 14.5vw;
+                    top: -8.1vw;
+                }
+                &__slash{
+                    font-size: 2.6vw;
+                    margin: 0 1vw;
+                    @include bkp(sp){
+                        font-size: 3.1vw;
+                    }
+                }
+            }
+            &__lists{
+                &__list{
+                    @include bkp(pc){
+                        display: flex !important;
+                    }
+                    &__img{
+                        @include bkp(pc){
+                            width: 40.2vw;
+                            margin-right: 7.2vw;
+                        }
+                    }
+                    &__txtbox{
+                        @include bkp(pc){
+                            width: 36.9vw;
+                        }
+                        &__ttl{
+                            font-size: 4.2vw;
+                            color: $color02;
+                            font-weight: normal;
+                            letter-spacing: 5px;
+                            @include bkp(sp){
+                                font-size: 6.4vw;
+                                margin-top: 9vw;
+                            }
+                        }
+                        &__txt{
+                            font-size: 1vw;
+                            letter-spacing: 1.5px;
+                            line-height: 1.9;
+                            color: $color02;
+                            margin: 2.2vw 0;
+                            @include bkp(sp){
+                                font-size: 3.2vw;
+                                margin: 4vw 0 5vw;
+                            }
+                        }
+                        .base_btn{
+                            margin-bottom: 3vw;
+                            @include bkp(pc){
+                                font-size: 1.4vw;
+                            }
+                            @include bkp(sp){
+                                margin-bottom: 5vw;
+                            }
+                        }
+                        &__index{
+                            text-align: right;
+                            position:relative;
+                            font-size: 1.4vw;
+                            color: $color01;
+                            @include bkp(pc){
+                                width: 93%;
+                            }
+                            @include bkp(sp){
+                                font-size: 3.2vw;
+                            }
+                            &:after{
+                                content: ""; 
+                                display: block;
+                                position: absolute;
+                                width: calc(100% - 3vw);
+                                background-color: $color01;
+                                height: 1px;
+                                right: 3vw;
+                                top: 50%;
+                                transform: translate(0,-50%);                            
+                                @include bkp(sp){
+                                    width: calc(100% - 6vw);
+                                    right: 6vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+       }
+    }
+    &__service{
+        padding: 0 0 10vw;
+        @include bkp(sp){
+            padding: 9.333vw 0 17.333vw;
+        }
+        &__txtarea{
+            @include bkp(sp){
+                width: 90%;
+                margin: 0 auto;
+            }
+            .sec_ttl{
+                text-align: center;
+                &_subtxt{
+                    margin: 0 auto 25px;
+                    @include bkp(sp){
+                        margin: 0 auto 2.6vw;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            &__ttl{
+                font-size: 4.286vw;
+                color: $color02;
+                letter-spacing: 0.07em;
+                line-height: 1.23;
+                margin-top: 5vw;
+                text-align: center;
+                font-weight: normal;
+                @include bkp(sp){
+                    font-size: 8vw;
+                    margin-top: 7.2vw;
+                }
+                .scr_cvr{
+                    @include bkp(sp){
+                        background-color: white;
+                        color: $color01;
+                        display: block;
+                        width: max-content;
+                        margin: 5px auto 0;
+                        padding: 1.067vw 3.2vw;
+                        &:before{
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+            &__txt{
+                font-size: 1.429vw;
+                letter-spacing: 0.12em;
+                line-height: 1.55;
+                color: $color02;
+                margin-top: 2.571vw;
+                text-align: center;
+                @include bkp(sp){
+                    font-size: 3.2vw;
+                    margin-top: 4.533vw;
+                    line-height: 2;                    
+                }
+            }
+        }
+        &__flow{
+            width: 74.643vw;
+            margin: 10.714vw auto 0;
+            @include bkp(sp){
+                width: 76%;
+            }
+            &__ttl{
+                .en{
+                    font-size: 1.071vw;
+                    color: $color01;
+                    letter-spacing: 0.04em;
+                    margin-bottom: 1.429vw;
+                    font-family: $ff;
+                    display: block;
+                    font-weight: normal;
+                    text-align: center;
+                    @include bkp(sp){
+                        font-size: 3vw;
+                    }
+                }
+                .jpbox{
+                    text-align: center;
+                    display: block;
+                    padding: 0.786vw 0;
+                    width: 100%;
+                    background-color: $color01;
+                    .txt{
+                        color: white;
+                        font-weight: normal;
+                        letter-spacing: 0.12em;
+                        font-size: 2.857vw;
+                    }
+                    @include bkp(sp){
+                        background: none;
+                        position: relative;
+                        .txt{
+                            color: $color01;
+                            font-size: 5.333vw;
+                            background-color: #f2e8e2;
+                            display: inline-block;
+                            padding: 0 4.533vw;
+                            position: relative;
+                            z-index: 2;
+                        }
+                        &::after{
+                            content: ""; 
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 0.427vw;
+                            background-color: $color01;
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0,-50%);
+                        }
+                    }
+                }
+            }
+            &__flx{
+                margin-top: 3.214vw;
+                position: relative;
+                @include bkp(sp){
+                    display: flex;
+                    margin-top: 11.2vw;
+                    justify-content: space-between;
+                    padding-bottom: 14.667vw;
+                }
+                &__box{
+                    background-color: white;
+                    padding: 3.571vw 0;
+                    margin-bottom: 7.143vw;
+                    position: relative;
+                    @include bkp(sp){
+                        background-color: #f2e8e2;
+                        border: 1px solid $color01;
+                        cursor: pointer;
+                        padding: 11.467vw 6.667vw 13.333vw;
+                        position: relative;
+                        margin-bottom: 0;
+                    }
+                    &:nth-last-of-type(2){
+                        @include bkp(pc){
+                            margin-bottom: 5.714vw;
+                        }
+                        &::after{
+                            @include bkp(pc){
+                                display: none;
+                            }
+                        }
+                    }
+                    &:after{
+                        @include bkp(pc){
+                            content: ""; 
+                            display: block;
+                            position: absolute;
+                            background: url(/asset/img/top/ico_arrow02.png)no-repeat;
+                            background-size: contain;
+                            background-position: center;
+                            width: 9.071vw;
+                            height: 2.643vw;
+                            left: 50%;
+                            bottom: -5.143vw;
+                            transform: translate(-50%,0);
+                        }
+                        @include bkp(sp){
+                            content: ""; 
+                            display: block;
+                            position: absolute;
+                            background: url(/asset/img/top/ico_arrow03.png)no-repeat;
+                            background-size: contain;
+                            background-position: center;
+                            width: 8vw;
+                            height: 2.667vw;
+                            left: 50%;
+                            bottom: 5.6vw;
+                            transform: translate(-50%,0);
+                        }
+                    }
+                    &__ttl{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 2.5vw;
+                        font-weight: normal;
+                        color: $color01;
+                        letter-spacing: 0.06em;
+                        font-family: "Noto Sans JP", sans-serif;
+                        @include bkp(sp){
+                            writing-mode: vertical-lr;
+                            color: $color02;
+                            font-family: inherit;
+                            font-size: 5.867vw;
+                            letter-spacing: 0.16em;
+                        }
+                        &__index{
+                            background-color: $color01;
+                            color: white;
+                            text-align: center;
+                            font-size: 1.714vw;
+                            font-family: $ff;
+                            width: 2.571vw;
+                            height: 2.571vw;
+                            display: flex;
+                            justify-content: center;
+                            padding: 0.179vw 0 0 0.143vw;
+                            align-items: center;
+                            font-weight: normal;
+                            margin-right: 1.143vw;
+                            margin-top: 0.214vw;
+                            @include bkp(sp){
+                                width: 11.2vw;
+                                height: 11.2vw;
+                                writing-mode: initial;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: -5.6vw;
+                                left: 50%;
+                                transform: translate(-50% , 0);
+                                letter-spacing: 0.12em;
+                                font-size: 4.267vw;
+                            }
+                        }
+                    }
+                    &__txt{
+                        text-align: center;
+                        color: $color02;
+                        font-family: "Noto Sans JP", sans-serif;
+                        line-height: 1.85;
+                        letter-spacing: 0.04em;
+                        margin-top: 1.5vw;
+                        font-size: 1vw;
+                        @include bkp(sp){
+                            display: none;
+                        }
+                    }
+                }
+                &__arrow{
+                    position: absolute;
+                    right: -7.714vw;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    @include bkp(sp){
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        left: 0;
+                        bottom: 0;
+                        top: auto;
+                        right: auto;
+                    }
+                    &__img{
+                        height: 100%;
+                        @include bkp(sp){
+                            margin-bottom: 3.2vw;
+                            height: auto;
+                        }
+                        img{
+                            height: 100%;
+                            width: auto;
+                            @include bkp(sp){
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    &__txt{
+                        writing-mode: vertical-lr;
+                        color: $color01;
+                        font-size: 1.571vw;
+                        font-family: "Noto Sans JP", sans-serif;
+                        margin-left: 2vw;
+                        letter-spacing: 0.18em;
+                        display: flex;
+                        align-items: center;
+                        @include bkp(sp){
+                            writing-mode: initial;
+                            font-size: 4.267vw;
+                            justify-content: center;
+                            margin-left: 0;
+                        }
+                        .num{
+                            writing-mode: initial;
+                            display: flex;
+                            padding-left: 0.286vw;
+                            margin-bottom: 0.286vw;
+                        }
+                    }
+                }
+            }
+            &__link{
+                font-size: 2.857vw;
+                display: block;
+                text-align: center;
+                position: relative;
+                margin: 5.714vw 0 0;
+                color: $color01;
+                letter-spacing: 0.12em;
+                padding: 1.571vw 0;
+                transition: .3s linear;
+                @include bkp(sp){
+                    color: white;
+                    background-color: $color01;
+                    font-size: 6.133vw;
+                    padding: 4.8vw 0;
+                    margin-top: 12vw;
+                }
+                &::before{
+                    @include bkp(pc){
+                        content: ""; 
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        border: 1px solid $color01;
+                        transition: .3s linear;
+                    }
+                }
+                &::after{
+                    @include bkp(pc){
+                        content: ""; 
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        right: -0.286vw;
+                        bottom: -0.286vw;
+                        border: 1px solid $color01;
+                        transition: .3s linear;
+                    }
+                }
+                &:hover{
+                    letter-spacing: 0.2em;
+                    transition: .3s linear;
+                    &::after{
+                        right: 0;
+                        bottom: 0;
+                        transition: .3s linear;
+                    }
+                }
+            }
+            &__modalbg{
+                @include bkp(pc){
+                    display: none;
+                }
+                @include bkp(sp){
+                    background-color: rgba(0, 0, 0, 0.4);
+                    width: 100%;
+                    height: 100vh;
+                    z-index: 9999;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    display: none;
+                }
+            }
+            &__modalwrap{
+                @include bkp(pc){
+                    display: none;
+                }
+                @include bkp(sp){
+                    position: fixed;
+                    z-index: 99999;
+                    left: 50%;
+                    top: 45%;
+                    transform: translate(-50% , -50%);
+                    width: 76%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .5s;
+                    &.on{
+                        transition: .5s;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                &__content{
+                    &__btn{
+                        width: 10.133vw;
+                        position: absolute;
+                        top: -14.133vw;
+                        right: 0;
+                    }
+                    &__slider{
+                        .slick-list{
+                            padding: 6.133vw 0 0 0;
+                            margin: -6.133vw 0 0 0;
+                        }
+                        .slick-slide{
+                            background-color: $color01;
+                        }
+                        .slick-track{
+                            opacity: 1;
+                            background-color: $color01;
+                        }
+                        .slick-next{
+                            position: absolute;
+                            bottom: -14.133vw;
+                            left: 58%;
+                            transform: translate(-50%,0);
+                            width: 10.133vw;
+                        }
+                        .slick-prev{
+                            position: absolute;
+                            bottom: -14.133vw;
+                            left: 42%;
+                            transform: translate(-50%,0);
+                            width: 10.133vw;
+                        }
+                        .flow_slide{
+                            background-color: $color01;
+                            position: relative;
+                            padding: 13.333vw 9.5% 10.667vw ;
+                            &.slide02{
+                                .flow_slide_ttl{
+                                    // font-size: 4.267vw;
+                                }
+                            }
+                            &.slide03{
+                                .flow_slide_ttl{
+                                    // font-size: 4.267vw;
+                                }
+                            }
+                            &_index{
+                                @include bkp(sp){
+                                    display: flex;
+                                    justify-content: center;
+                                    width: 12.267vw;
+                                    color: $color01;
+                                    border: 1px solid $color01;
+                                    align-items: center;
+                                    height: 12.267vw;
+                                    writing-mode: initial;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: -6.133vw;
+                                    left: 50%;
+                                    transform: translate(-50% , 0);
+                                    letter-spacing: 0.12em;
+                                    font-size: 4.267vw;
+                                    background-color: white;
+                                }
+                            }
+                            &_ttl{
+                                font-size: 4.8vw;
+                                text-align: center;
+                                color: white;
+                                font-weight: normal;
+                                letter-spacing: 0.16em;
+                                padding-bottom: 3.733vw;
+                                border-bottom: 2px solid white;
+                            }
+                            &_txt{
+                                font-size: 3.2vw;
+                                line-height: 2;
+                                letter-spacing: 0.06em;
+                                color: white;
+                                margin-top: 2.667vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__voice{
+        background: url(/asset/img/top/bg_voice01.png)no-repeat;
+        background-size: cover;
+        padding: 11.786vw 5vw 6.429vw;
+        @include bkp(sp){
+            padding: 16vw 12% 11.733vw;
+            background-position: -98.667vw;
+        }
+        &__txtbox{
+            .sec_ttl{
+                color: white;
+                text-align: center;
+                position: relative;
+                &_subtxt{
+                    margin: 0 auto 1.786vw;
+                    @include bkp(sp){
+                        margin: 0 auto 2.6vw;
+                    }
+                }
+                &:after{
+                    content: ""; 
+                    display: block;
+                    position: absolute;
+                    width: 0.143vw;
+                    height: 2.857vw;
+                    left: 50%;
+                    top: -5.929vw;
+                    background-color: white;
+                    transform: translate(-50%,0);
+                    @include bkp(sp){
+                        display: none;
+                    }
+                }
+            }
+            &__txt{
+                text-align: center;
+                font-size: 1.857vw;
+                letter-spacing: 0.12em;
+                line-height: 1.44;
+                color: white;
+                margin-top: 3.929vw;
+                @include bkp(sp){
+                    margin-top: 5vw;
+                    font-size: 3.2vw;
+                    line-height: 1.8;
+                }
+            }
+        }
+        &__content{
+            margin-top: 7.143vw;
+            @include bkp(sp){
+                margin-top: 13.333vw;
+            }
+            &__lists{
+                @include bkp(pc){
+                    display: flex;
+                    justify-content: center;
+                }
+                .slick-next{
+                    @include bkp(sp){
+                        top: 22.133vw;
+                        right: -8.8vw;
+                        width: 5.867vw;
+                    }
+                }
+                .slick-prev{
+                    @include bkp(sp){
+                        top: 22.133vw;
+                        left: -8.8vw;
+                        width: 5.867vw;
+                    }
+                }
+                .voice_list{
+                    @include bkp(pc){
+                        width: 25.286vw;
+                    }
+                    &:nth-of-type(2){
+                        @include bkp(pc){
+                            margin: 4.643vw 5vw 0;
+                        }
+                    }
+                    &_link{
+                        display: block;
+                        &:hover{
+                            .voice_list_link_img{
+                                img{
+                                    transition: 0.35s;
+                                    transform: scale(1.1);
+                                }
+                            }
+                            .voice_list_link_btn{
+                                border: 1px solid $color01;
+                                &::after{
+                                    left: 0;
+                                }
+                                .txt{
+                                    color: $color01;
+                                }
+                            }
+                        }
+                        &_img{
+                            overflow: hidden;
+                            img{
+                                transition: 0.35s;
+                                display: block;
+                            }
+                        }
+                        &_ttl{
+                            color: white;
+                            margin-top: 2.857vw;
+                            font-size: 1.786vw;
+                            font-weight: 700;
+                            line-height: 1.5;
+                            letter-spacing: 0.14em;
+                            @include bkp(sp){
+                                font-size: 4.16vw;
+                                margin-top: 8vw;
+                                font-weight: 500;
+                            }
+                        }
+                        &_txt{
+                            font-size: 1vw;
+                            color: white;
+                            letter-spacing: 0.08em;
+                            line-height: 1.9;
+                            margin-top: 2.143vw;
+                            font-family: "Noto Sans JP", sans-serif;
+                            @include bkp(sp){
+                                font-size: 3.2vw;
+                                margin-top: 6.4vw;
+                                letter-spacing: 0.17em;
+                            }
+                        }
+                        &_name{
+                            font-family: "Noto Sans JP", sans-serif;
+                            font-size: 1vw;
+                            color: white;
+                            letter-spacing: 0.1em;
+                            font-weight: bold;
+                            margin: 2.643vw 0 2.5vw;
+                            @include bkp(sp){
+                                font-size: 2.933vw;
+                                margin: 5.867vw 0 8vw;
+                            }
+                        }
+                        &_btn{
+                            width: max-content;
+                            overflow: hidden;
+                            position: relative;
+                            border: 1px solid white;
+                            padding: 0.286vw 0.571vw 0.429vw;
+                            transition: .35s;
+                            @include bkp(sp){
+                                width: 100%;
+                                text-align: center;
+                                padding: 1.6vw 0 1.867vw;
+                            }
+                            &::after{
+                                content: ""; 
+                                display: block;
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: -100%;
+                                top: 50%;
+                                transform: translate(0,-50%);
+                                transition: .35s;
+                                z-index: 1;
+                                background-color: white;
+                            }
+                            .txt{
+                                position: relative;
+                                z-index: 2;
+                                font-size: 1vw;
+                                letter-spacing: 0.09em;
+                                transition: .35s;
+                                color: white;
+                                @include bkp(sp){
+                                    font-size: 3.6vw;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    &__profile{
+        padding: 8.214vw 0;
+        @include bkp(sp){
+            padding: 17.333vw 0 14.667vw;
+        }
+        .flx{
+            @include bkp(pc){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @include bkp(sp){
+                display: block;
+                padding: 0 12%;
+            }
+            .top__profile__left{
+                .sec_ttl_subtxt{
+                    @include bkp(sp){
+                        text-align: center;
+                        color: $color01;
+                        display: block;
+                        font-size: 3.733vw;
+                        width: 100%;
+                        margin-bottom: 6.4vw;
+                    }
+                }
+                @include bkp(pc){
+                    width: 42.929vw;
+                    margin-right: 5.929vw;
+                }
+            }
+            .top__profile__right{
+                @include bkp(pc){
+                    width: 35.714vw;
+                }
+                @include bkp(sp){
+                    margin-top: 9.333vw;
+                }
+                .sec_ttl{
+                    width: 27.571vw;
+                    @include bkp(sp){
+                        width: 100%;
+                    }
+                    &_subtxt{
+                        @include bkp(pc){
+                            font-size: 2.214vw;
+                            margin-bottom: 3.3vw;
+                        }
+                        @include bkp(sp){
+                            display: none;
+                        }
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+                &__txt{
+                    font-size: 1vw;
+                    letter-spacing: 0.3em;
+                    line-height: 2.15;
+                    color: #4f1a05;
+                    margin-top: 1.071vw;
+                    @include bkp(sp){
+                        font-size: 3.2vw;
+                        line-height: 1.9;
+                        margin-top: 4.8vw;
+                    }
+                }
+                .linklist{
+                    display: flex;
+                    margin-top: 3.929vw;
+                    @include bkp(sp){
+                        margin-top: 5vw;
+                        justify-content: space-between;
+                    }
+                    li{
+                        @include bkp(sp){
+                            width: 23.8%;
+                        }
+                        a{
+                            color: $color01;
+                            font-size: 1.214vw;
+                            text-align: center;
+                            width: 8.286vw;
+                            letter-spacing: 0.08em;
+                            display: block;
+                            padding: 0.286vw 0.5vw 0.357vw;
+                            border: 2px solid $color01;
+                            margin-right: 0.5vw;
+                            font-family: serif;
+                            @include bkp(sp){
+                                padding: 1.067vw 0 1.333vw;
+                                letter-spacing: 0.04em;
+                                width: 100%;
+                                font-size: 2.933vw;
+                                border: 1px solid $color01;
+                            }
+                        }
+                        &:nth-of-type(1) , &:nth-of-type(4) {
+                            a{
+                                // padding: 0.143vw 0.5vw 0.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__contact{
+        background-color: white;
+        padding: 6.429vw 0;
+        @include bkp(sp){
+            padding: 14.667vw 0;
+        }
+        .sec_ttl{
+            text-align: center;
+            margin: 0 auto;
+            &_subtxt{
+                margin: 0 auto 1.786vw;
+                @include bkp(sp){
+                    margin: 0 auto 2.6vw;
+                }
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        &__txt{
+            font-size: 1.429vw;
+            letter-spacing: 0.04em;
+            color: #4f1a05;
+            margin-top: 2.857vw;
+            text-align: center;
+            @include bkp(sp){
+                font-size: 2.933vw;
+                line-height: 1.7;
+            }
+        }
+        .flx{
+            display: flex;
+            justify-content: center;
+            margin-top: 2.643vw;
+            @include bkp(sp){
+                display: block;
+                margin-top: 6.933vw;
+            }
+            li{
+                @include bkp(sp){
+                    width: 55vw;
+                    margin: 0 auto 4vw;
+                }
+                &:nth-of-type(1){
+                    @include bkp(pc){
+                        margin-right: 3.5vw;
+                    }
+                    a{
+                        .txt{
+                            .ico{
+                                width: 1.786vw;
+                                @include bkp(sp){
+                                    width: 4vw;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    @include bkp(sp){
+                        margin: 0 auto;
+                    }
+                    a{
+                        .txt{
+                            .ico{
+                                width: 2vw;
+                                @include bkp(sp){
+                                    width: 4vw;
+                                }
+                            }
+                        }
+                    }
+                }
+                a{
+                    color: $color01;
+                    text-align: center;
+                    width: 26.857vw;
+                    display: block;
+                    border: 2px solid $color01;
+                    height: 5vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 0.357vw;
+                    @include bkp(sp){
+                        width: 100%;
+                        height: 11.467vw;
+                    }
+                    .txt{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 2.214vw;
+                        letter-spacing: 0.08em;
+                        @include bkp(sp){
+                            font-size: 4.267vw;
+                        }
+                        .ico{
+                            margin-right: 0.857vw;
+                            @include bkp(sp){
+                                margin-right: 2.133vw;
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(1) , &:nth-of-type(4) {
+                    a{
+                        // padding: 0.143vw 0.5vw 0.5vw;
+                    }
+                }
+            }
+        }
+    }
+}

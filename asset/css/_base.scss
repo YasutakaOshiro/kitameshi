@@ -1,0 +1,415 @@
+@charset "utf-8";
+@import "compass/css3/";
+
+/*----------------------------------------
+  reset
+-----------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // &::selection {
+  //   background: #dadada;
+  //   color: #000;
+  // }
+}
+
+html {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img{
+  width: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+p {
+  text-align: justify;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+  outline: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+//safariでのフォーム周りの設定を無効化する
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="tel"],
+input[type="email"] {
+  -webkit-appearance: none;
+  border: none;
+  box-sizing: border-box;
+}
+input[type="text"]:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: 0;
+  // border: 1px solid #ddd;
+  background-color: #fff;
+}
+input:-internal-autofill-selected {
+  background-color: #fff !important;
+}
+input[type="text"]:focus:placeholder-shown,
+input[type="button"]:focus:placeholder-shown,
+input[type="submit"]:focus:placeholder-shown,
+input[type="tel"]:focus:placeholder-shown,
+input[type="email"]:focus:placeholder-shown,
+textarea:focus:placeholder-shown {
+  color: #ddd;
+}
+input[type="text"]:focus:-webkit-input-placeholder,
+input[type="button"]:focus:-webkit-input-placeholder,
+input[type="submit"]:focus:-webkit-input-placeholder,
+input[type="tel"]:focus:-webkit-input-placeholder,
+input[type="email"]:focus:-webkit-input-placeholder,
+textarea:focus:-webkit-input-placeholder {
+  color: #ddd;
+}
+input[type="text"]:focus:-moz-placeholder,
+input[type="button"]:focus:-moz-placeholder,
+input[type="submit"]:focus:-moz-placeholder,
+input[type="tel"]:focus:-moz-placeholder,
+input[type="email"]:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: #ddd;
+}
+input[type="text"]:focus:-ms-input-placeholder,
+input[type="button"]:focus:-ms-input-placeholder,
+input[type="submit"]:focus:-ms-input-placeholder,
+input[type="tel"]:focus:-ms-input-placeholder,
+input[type="email"]:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: #ddd;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none transparent;
+  vertical-align: middle;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: content-box;
+}
+
+input[type="text"]:placeholder-shown,
+input[type="email"]:placeholder-shown,
+input[type="tel"]:placeholder-shown {
+  color: #ddd;
+}
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder {
+  color: #ddd;
+}
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ddd;
+}
+
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #fff;
+}
+textarea {
+  resize: vertical;
+}
+textarea:placeholder-shown {
+  color: #ddd;
+}
+textarea::-webkit-input-placeholder {
+  color: #ddd;
+}
+textarea::-moz-placeholder {
+  color: #ddd;
+}
+
+// 入力欄にフォーカスした時、プレースホルダーを非表示にする。
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+  transition: 0.1s;
+}
+// Chrome・Safari用
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+  transition: 0.1s;
+}
+// Firefox18以前用
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+  transition: 0.1s;
+}
+// Firefox19以上用
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+  transition: 0.1s;
+}
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+/*スマートフォンサイトでaタグをタップしたときにでるハイライトの色を消す*/
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #212121;
+  @media screen and (min-width: 896px) {
+    transition: 0.3s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    &:hover {
+      transition: 0.3s;
+      cursor: pointer;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border: none;
+  border-spacing: 0;
+  width: 100%;
+}
+th,
+td {
+  vertical-align: middle;
+  border: solid 1px #000;
+  font-weight: normal;
+  text-align: left;
+  border: 0;
+}
+caption {
+  text-align: left;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-display: swap;
+}
+body {
+  overflow-x: hidden;
+  @media screen and (max-width: 896px) {
+    &.sp_fix {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+svg {
+  width: 100%;
+  height: auto;
+}
+//slickのアウトラインを消す
+.slick-list:focus {
+  outline: none !important;
+}
