@@ -862,7 +862,7 @@ svg {
 }
 /* line 4, _top.scss */
 .bg_wrap {
-  background: url(/asset/img/top/bg01.png);
+  background: url(../../../asset/img/top/bg01.png);
   background-size: 100%;
 }
 
@@ -888,7 +888,7 @@ svg {
   content: "";
   display: block;
   position: absolute;
-  background: url(/asset/img/top/ico_arrow01.png) no-repeat;
+  background: url(../../../asset/img/top/ico_arrow01.png) no-repeat;
   background-size: contain;
   background-position: center;
   width: 0.7vw;
@@ -1075,14 +1075,14 @@ svg {
 }
 /* line 169, _top.scss */
 .top__concept {
-  background: url(/asset/img/top/bg_concept01.png) no-repeat;
+  background: url(../../../asset/img/top/bg_concept01.png) no-repeat;
   background-size: cover;
   padding: 5.7vw 0;
 }
 @media screen and (max-width: 896px) {
   /* line 169, _top.scss */
   .top__concept {
-    background: url(/asset/img/top/bg_concept01_sp.png) no-repeat;
+    background: url(../../../asset/img/top/bg_concept01_sp.png) no-repeat;
     background-size: cover;
     padding: 18vw 0;
   }
@@ -1748,7 +1748,7 @@ svg {
     content: "";
     display: block;
     position: absolute;
-    background: url(/asset/img/top/ico_arrow02.png) no-repeat;
+    background: url(../../../asset/img/top/ico_arrow02.png) no-repeat;
     background-size: contain;
     background-position: center;
     width: 9.071vw;
@@ -1764,7 +1764,7 @@ svg {
     content: "";
     display: block;
     position: absolute;
-    background: url(/asset/img/top/ico_arrow03.png) no-repeat;
+    background: url(../../../asset/img/top/ico_arrow03.png) no-repeat;
     background-size: contain;
     background-position: center;
     width: 8vw;
@@ -2104,7 +2104,7 @@ svg {
 }
 /* line 981, _top.scss */
 .top__voice {
-  background: url(/asset/img/top/bg_voice01.png) no-repeat;
+  background: url(../../../asset/img/top/bg_voice01.png) no-repeat;
   background-size: cover;
   padding: 11.786vw 5vw 6.429vw;
 }

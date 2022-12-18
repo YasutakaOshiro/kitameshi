@@ -2,7 +2,7 @@
 @import "compass/css3/";
 
 .bg_wrap{
-    background: url(/asset/img/top/bg01.png);
+    background: url(../../../asset/img/top/bg01.png);
     background-size: 100%;
 }
 .base_btn{
@@ -21,7 +21,7 @@
         content: ""; 
         display: block;
         position: absolute;
-        background: url(/asset/img/top/ico_arrow01.png)no-repeat;
+        background: url(../../../asset/img/top/ico_arrow01.png)no-repeat;
         background-size: contain;
         background-position: center;
         width: 0.7vw;
@@ -167,11 +167,11 @@
         }
     }
     &__concept{
-        background: url(/asset/img/top/bg_concept01.png)no-repeat;
+        background: url(../../../asset/img/top/bg_concept01.png)no-repeat;
         background-size: cover;
         padding: 5.7vw 0;
         @include bkp(sp){
-            background: url(/asset/img/top/bg_concept01_sp.png)no-repeat;
+            background: url(../../../asset/img/top/bg_concept01_sp.png)no-repeat;
             background-size: cover;
             padding: 18vw 0;
         }
@@ -665,7 +665,7 @@
                             content: ""; 
                             display: block;
                             position: absolute;
-                            background: url(/asset/img/top/ico_arrow02.png)no-repeat;
+                            background: url(../../../asset/img/top/ico_arrow02.png)no-repeat;
                             background-size: contain;
                             background-position: center;
                             width: 9.071vw;
@@ -678,7 +678,7 @@
                             content: ""; 
                             display: block;
                             position: absolute;
-                            background: url(/asset/img/top/ico_arrow03.png)no-repeat;
+                            background: url(../../../asset/img/top/ico_arrow03.png)no-repeat;
                             background-size: contain;
                             background-position: center;
                             width: 8vw;
@@ -979,7 +979,7 @@
         }
     }
     &__voice{
-        background: url(/asset/img/top/bg_voice01.png)no-repeat;
+        background: url(../../../asset/img/top/bg_voice01.png)no-repeat;
         background-size: cover;
         padding: 11.786vw 5vw 6.429vw;
         @include bkp(sp){
