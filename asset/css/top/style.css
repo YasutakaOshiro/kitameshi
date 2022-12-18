@@ -1295,12 +1295,15 @@ svg {
     letter-spacing: 1.5px;
   }
 }
+/* line 333, _top.scss */
+.top__vision__txtbox .base_btn {
+  position: relative;
+  z-index: 2;
+}
 @media screen and (max-width: 896px) {
   /* line 333, _top.scss */
   .top__vision__txtbox .base_btn {
     margin: 0 auto 0 12%;
-    position: relative;
-    z-index: 2;
   }
 }
 /* line 342, _top.scss */

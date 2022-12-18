@@ -331,10 +331,10 @@
                 }
             }
             .base_btn{
+                position: relative;
+                z-index: 2;
                 @include bkp(sp){
                     margin:0 auto 0 12%;
-                    position: relative;
-                    z-index: 2;
                 }
             }
         }
