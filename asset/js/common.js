@@ -328,8 +328,8 @@ if (w < 896) {
     autoplaySpeed: 10000,
     fade: true ,
     //個別でarrowを追加
-    prevArrow: '<div class="slick-prev slick-arrow ablt"><img src=../../asset/img/top/ico_prev_white01.png" alt="prev"></div>',
-    nextArrow: '<div class="slick-next slick-arrow ablt"><img src=../../asset/img/top/ico_next_white01.png" alt="next"></div>',
+    prevArrow: '<div class="slick-prev slick-arrow ablt"><img src=../../../asset/img/top/ico_prev_white01.png" alt="prev"></div>',
+    nextArrow: '<div class="slick-next slick-arrow ablt"><img src=../../../asset/img/top/ico_next_white01.png" alt="next"></div>',
   });
   $('.close_modal').click(function(){
     $('.close_modal').fadeOut();
