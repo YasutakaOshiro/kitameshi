@@ -648,6 +648,9 @@
                         padding: 11.467vw 6.667vw 13.333vw;
                         position: relative;
                         margin-bottom: 0;
+                        align-items: baseline;
+                        display: flex;
+                        justify-content: center;
                     }
                     &:nth-last-of-type(2){
                         @include bkp(pc){

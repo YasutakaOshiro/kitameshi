@@ -482,10 +482,6 @@ svg {
   outline: none !important;
 }
 
-@font-face {
-  font-family: 'Cinzel';
-  src: url("/asset/font/onryou.ttf") format("truetype");
-}
 /* line 74, ../_module.scss */
 .tel.no_link {
   pointer-events: none;
@@ -840,24 +836,19 @@ svg {
 
 @keyframes fuwafuwa {
   0% {
-    transform: scale(1);
     opacity: 1;
   }
   25% {
-    transform: translate(0, 0) scale(1.05);
     opacity: .5;
   }
   50% {
     opacity: 1;
-    transform: scale(1);
   }
   75% {
-    transform: scale(1.05);
     opacity: .5;
   }
   100% {
     opacity: 1;
-    transform: scale(1);
   }
 }
 /* line 4, _top.scss */
@@ -923,7 +914,7 @@ svg {
 .sec_ttl {
   font-size: 7.1vw;
   color: #b84422;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Cinzel", serif;
   font-weight: normal;
   letter-spacing: 5px;
 }
@@ -999,7 +990,7 @@ svg {
 .top__mv__scroll {
   position: absolute;
   color: white;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Cinzel", serif;
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 9.6vw;
@@ -1105,7 +1096,7 @@ svg {
   font-weight: normal;
   font-size: 1.4vw;
   letter-spacing: 3px;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Cinzel", serif;
 }
 @media screen and (min-width: 897px) {
   /* line 186, _top.scss */
@@ -1645,7 +1636,7 @@ svg {
   color: #b84422;
   letter-spacing: 0.04em;
   margin-bottom: 1.3vw;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Cinzel", serif;
   display: block;
   font-weight: normal;
   text-align: center;
@@ -1730,22 +1721,25 @@ svg {
     padding: 11.467vw 6.667vw 13.333vw;
     position: relative;
     margin-bottom: 0;
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 652, _top.scss */
+  /* line 655, _top.scss */
   .top__service__flow__flx__box:nth-last-of-type(2) {
     margin-bottom: 5.714vw;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 656, _top.scss */
+  /* line 659, _top.scss */
   .top__service__flow__flx__box:nth-last-of-type(2)::after {
     display: none;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 662, _top.scss */
+  /* line 665, _top.scss */
   .top__service__flow__flx__box:after {
     content: "";
     display: block;
@@ -1761,7 +1755,7 @@ svg {
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 662, _top.scss */
+  /* line 665, _top.scss */
   .top__service__flow__flx__box:after {
     content: "";
     display: block;
@@ -1776,7 +1770,7 @@ svg {
     transform: translate(-50%, 0);
   }
 }
-/* line 690, _top.scss */
+/* line 693, _top.scss */
 .top__service__flow__flx__box__ttl {
   display: flex;
   align-items: center;
@@ -1788,7 +1782,7 @@ svg {
   font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 896px) {
-  /* line 690, _top.scss */
+  /* line 693, _top.scss */
   .top__service__flow__flx__box__ttl {
     writing-mode: vertical-lr;
     color: #4f1a05;
@@ -1797,13 +1791,13 @@ svg {
     letter-spacing: 0.16em;
   }
 }
-/* line 706, _top.scss */
+/* line 709, _top.scss */
 .top__service__flow__flx__box__ttl__index {
   background-color: #b84422;
   color: white;
   text-align: center;
   font-size: 1.714vw;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Cinzel", serif;
   width: 2.571vw;
   height: 2.571vw;
   display: flex;
@@ -1815,7 +1809,7 @@ svg {
   margin-top: 0.214vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 706, _top.scss */
+  /* line 709, _top.scss */
   .top__service__flow__flx__box__ttl__index {
     width: 11.2vw;
     height: 11.2vw;
@@ -1829,7 +1823,7 @@ svg {
     font-size: 4.267vw;
   }
 }
-/* line 735, _top.scss */
+/* line 738, _top.scss */
 .top__service__flow__flx__box__txt {
   text-align: center;
   color: #4f1a05;
@@ -1840,12 +1834,12 @@ svg {
   font-size: 1vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 735, _top.scss */
+  /* line 738, _top.scss */
   .top__service__flow__flx__box__txt {
     display: none;
   }
 }
-/* line 748, _top.scss */
+/* line 751, _top.scss */
 .top__service__flow__flx__arrow {
   position: absolute;
   right: -7.714vw;
@@ -1855,7 +1849,7 @@ svg {
   height: 100%;
 }
 @media screen and (max-width: 896px) {
-  /* line 748, _top.scss */
+  /* line 751, _top.scss */
   .top__service__flow__flx__arrow {
     display: block;
     width: 100%;
@@ -1866,30 +1860,30 @@ svg {
     right: auto;
   }
 }
-/* line 764, _top.scss */
+/* line 767, _top.scss */
 .top__service__flow__flx__arrow__img {
   height: 100%;
 }
 @media screen and (max-width: 896px) {
-  /* line 764, _top.scss */
+  /* line 767, _top.scss */
   .top__service__flow__flx__arrow__img {
     margin-bottom: 3.2vw;
     height: auto;
   }
 }
-/* line 770, _top.scss */
+/* line 773, _top.scss */
 .top__service__flow__flx__arrow__img img {
   height: 100%;
   width: auto;
 }
 @media screen and (max-width: 896px) {
-  /* line 770, _top.scss */
+  /* line 773, _top.scss */
   .top__service__flow__flx__arrow__img img {
     width: 100%;
     height: auto;
   }
 }
-/* line 779, _top.scss */
+/* line 782, _top.scss */
 .top__service__flow__flx__arrow__txt {
   writing-mode: vertical-lr;
   color: #b84422;
@@ -1901,7 +1895,7 @@ svg {
   align-items: center;
 }
 @media screen and (max-width: 896px) {
-  /* line 779, _top.scss */
+  /* line 782, _top.scss */
   .top__service__flow__flx__arrow__txt {
     writing-mode: initial;
     font-size: 4.267vw;
@@ -1909,14 +1903,14 @@ svg {
     margin-left: 0;
   }
 }
-/* line 794, _top.scss */
+/* line 797, _top.scss */
 .top__service__flow__flx__arrow__txt .num {
   writing-mode: initial;
   display: flex;
   padding-left: 0.286vw;
   margin-bottom: 0.286vw;
 }
-/* line 803, _top.scss */
+/* line 806, _top.scss */
 .top__service__flow__link {
   font-size: 2.857vw;
   display: block;
@@ -1929,7 +1923,7 @@ svg {
   transition: .3s linear;
 }
 @media screen and (max-width: 896px) {
-  /* line 803, _top.scss */
+  /* line 806, _top.scss */
   .top__service__flow__link {
     color: white;
     background-color: #b84422;
@@ -1939,7 +1933,7 @@ svg {
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 820, _top.scss */
+  /* line 823, _top.scss */
   .top__service__flow__link::before {
     content: "";
     display: block;
@@ -1953,7 +1947,7 @@ svg {
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 833, _top.scss */
+  /* line 836, _top.scss */
   .top__service__flow__link::after {
     content: "";
     display: block;
@@ -1966,25 +1960,25 @@ svg {
     transition: .3s linear;
   }
 }
-/* line 846, _top.scss */
+/* line 849, _top.scss */
 .top__service__flow__link:hover {
   letter-spacing: 0.2em;
   transition: .3s linear;
 }
-/* line 849, _top.scss */
+/* line 852, _top.scss */
 .top__service__flow__link:hover::after {
   right: 0;
   bottom: 0;
   transition: .3s linear;
 }
 @media screen and (min-width: 897px) {
-  /* line 856, _top.scss */
+  /* line 859, _top.scss */
   .top__service__flow__modalbg {
     display: none;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 856, _top.scss */
+  /* line 859, _top.scss */
   .top__service__flow__modalbg {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -1997,13 +1991,13 @@ svg {
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 871, _top.scss */
+  /* line 874, _top.scss */
   .top__service__flow__modalwrap {
     display: none;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 871, _top.scss */
+  /* line 874, _top.scss */
   .top__service__flow__modalwrap {
     position: fixed;
     z-index: 99999;
@@ -2015,35 +2009,35 @@ svg {
     visibility: hidden;
     transition: .5s;
   }
-  /* line 885, _top.scss */
+  /* line 888, _top.scss */
   .top__service__flow__modalwrap.on {
     transition: .5s;
     opacity: 1;
     visibility: visible;
   }
 }
-/* line 892, _top.scss */
+/* line 895, _top.scss */
 .top__service__flow__modalwrap__content__btn {
   width: 10.133vw;
   position: absolute;
   top: -14.133vw;
   right: 0;
 }
-/* line 899, _top.scss */
+/* line 902, _top.scss */
 .top__service__flow__modalwrap__content__slider .slick-list {
   padding: 6.133vw 0 0 0;
   margin: -6.133vw 0 0 0;
 }
-/* line 903, _top.scss */
+/* line 906, _top.scss */
 .top__service__flow__modalwrap__content__slider .slick-slide {
   background-color: #b84422;
 }
-/* line 906, _top.scss */
+/* line 909, _top.scss */
 .top__service__flow__modalwrap__content__slider .slick-track {
   opacity: 1;
   background-color: #b84422;
 }
-/* line 910, _top.scss */
+/* line 913, _top.scss */
 .top__service__flow__modalwrap__content__slider .slick-next {
   position: absolute;
   bottom: -14.133vw;
@@ -2051,7 +2045,7 @@ svg {
   transform: translate(-50%, 0);
   width: 10.133vw;
 }
-/* line 917, _top.scss */
+/* line 920, _top.scss */
 .top__service__flow__modalwrap__content__slider .slick-prev {
   position: absolute;
   bottom: -14.133vw;
@@ -2059,14 +2053,14 @@ svg {
   transform: translate(-50%, 0);
   width: 10.133vw;
 }
-/* line 924, _top.scss */
+/* line 927, _top.scss */
 .top__service__flow__modalwrap__content__slider .flow_slide {
   background-color: #b84422;
   position: relative;
   padding: 13.333vw 9.5% 10.667vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 938, _top.scss */
+  /* line 941, _top.scss */
   .top__service__flow__modalwrap__content__slider .flow_slide_index {
     display: flex;
     justify-content: center;
@@ -2086,7 +2080,7 @@ svg {
     background-color: white;
   }
 }
-/* line 958, _top.scss */
+/* line 961, _top.scss */
 .top__service__flow__modalwrap__content__slider .flow_slide_ttl {
   font-size: 4.8vw;
   text-align: center;
@@ -2096,7 +2090,7 @@ svg {
   padding-bottom: 3.733vw;
   border-bottom: 2px solid white;
 }
-/* line 967, _top.scss */
+/* line 970, _top.scss */
 .top__service__flow__modalwrap__content__slider .flow_slide_txt {
   font-size: 3.2vw;
   line-height: 2;
@@ -2104,36 +2098,36 @@ svg {
   color: white;
   margin-top: 2.667vw;
 }
-/* line 980, _top.scss */
+/* line 983, _top.scss */
 .top__voice {
   background: url(../../../asset/img/top/bg_voice01.png) no-repeat;
   background-size: cover;
   padding: 11.786vw 5vw 6.429vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 980, _top.scss */
+  /* line 983, _top.scss */
   .top__voice {
     padding: 16vw 12% 11.733vw;
     background-position: -98.667vw;
   }
 }
-/* line 989, _top.scss */
+/* line 992, _top.scss */
 .top__voice__txtbox .sec_ttl {
   color: white;
   text-align: center;
   position: relative;
 }
-/* line 993, _top.scss */
+/* line 996, _top.scss */
 .top__voice__txtbox .sec_ttl_subtxt {
   margin: 0 auto 1.786vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 993, _top.scss */
+  /* line 996, _top.scss */
   .top__voice__txtbox .sec_ttl_subtxt {
     margin: 0 auto 2.6vw;
   }
 }
-/* line 999, _top.scss */
+/* line 1002, _top.scss */
 .top__voice__txtbox .sec_ttl:after {
   content: "";
   display: block;
@@ -2146,12 +2140,12 @@ svg {
   transform: translate(-50%, 0);
 }
 @media screen and (max-width: 896px) {
-  /* line 999, _top.scss */
+  /* line 1002, _top.scss */
   .top__voice__txtbox .sec_ttl:after {
     display: none;
   }
 }
-/* line 1014, _top.scss */
+/* line 1017, _top.scss */
 .top__voice__txtbox__txt {
   text-align: center;
   font-size: 1.857vw;
@@ -2161,32 +2155,32 @@ svg {
   margin-top: 3.929vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1014, _top.scss */
+  /* line 1017, _top.scss */
   .top__voice__txtbox__txt {
     margin-top: 5vw;
     font-size: 3.2vw;
     line-height: 1.8;
   }
 }
-/* line 1028, _top.scss */
+/* line 1031, _top.scss */
 .top__voice__content {
   margin-top: 7.143vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1028, _top.scss */
+  /* line 1031, _top.scss */
   .top__voice__content {
     margin-top: 13.333vw;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1033, _top.scss */
+  /* line 1036, _top.scss */
   .top__voice__content__lists {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1038, _top.scss */
+  /* line 1041, _top.scss */
   .top__voice__content__lists .slick-next {
     top: 22.133vw;
     right: -8.8vw;
@@ -2194,7 +2188,7 @@ svg {
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1045, _top.scss */
+  /* line 1048, _top.scss */
   .top__voice__content__lists .slick-prev {
     top: 22.133vw;
     left: -8.8vw;
@@ -2202,48 +2196,48 @@ svg {
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1052, _top.scss */
+  /* line 1055, _top.scss */
   .top__voice__content__lists .voice_list {
     width: 25.286vw;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1056, _top.scss */
+  /* line 1059, _top.scss */
   .top__voice__content__lists .voice_list:nth-of-type(2) {
     margin: 4.643vw 5vw 0;
   }
 }
-/* line 1061, _top.scss */
+/* line 1064, _top.scss */
 .top__voice__content__lists .voice_list_link {
   display: block;
 }
-/* line 1065, _top.scss */
+/* line 1068, _top.scss */
 .top__voice__content__lists .voice_list_link:hover .voice_list_link_img img {
   transition: 0.35s;
   transform: scale(1.1);
 }
-/* line 1070, _top.scss */
+/* line 1073, _top.scss */
 .top__voice__content__lists .voice_list_link:hover .voice_list_link_btn {
   border: 1px solid #b84422;
 }
-/* line 1072, _top.scss */
+/* line 1075, _top.scss */
 .top__voice__content__lists .voice_list_link:hover .voice_list_link_btn::after {
   left: 0;
 }
-/* line 1075, _top.scss */
+/* line 1078, _top.scss */
 .top__voice__content__lists .voice_list_link:hover .voice_list_link_btn .txt {
   color: #b84422;
 }
-/* line 1080, _top.scss */
+/* line 1083, _top.scss */
 .top__voice__content__lists .voice_list_link_img {
   overflow: hidden;
 }
-/* line 1082, _top.scss */
+/* line 1085, _top.scss */
 .top__voice__content__lists .voice_list_link_img img {
   transition: 0.35s;
   display: block;
 }
-/* line 1087, _top.scss */
+/* line 1090, _top.scss */
 .top__voice__content__lists .voice_list_link_ttl {
   color: white;
   margin-top: 2.857vw;
@@ -2253,14 +2247,14 @@ svg {
   letter-spacing: 0.14em;
 }
 @media screen and (max-width: 896px) {
-  /* line 1087, _top.scss */
+  /* line 1090, _top.scss */
   .top__voice__content__lists .voice_list_link_ttl {
     font-size: 4.16vw;
     margin-top: 8vw;
     font-weight: 500;
   }
 }
-/* line 1100, _top.scss */
+/* line 1103, _top.scss */
 .top__voice__content__lists .voice_list_link_txt {
   font-size: 1vw;
   color: white;
@@ -2270,14 +2264,14 @@ svg {
   font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 896px) {
-  /* line 1100, _top.scss */
+  /* line 1103, _top.scss */
   .top__voice__content__lists .voice_list_link_txt {
     font-size: 3.2vw;
     margin-top: 6.4vw;
     letter-spacing: 0.17em;
   }
 }
-/* line 1113, _top.scss */
+/* line 1116, _top.scss */
 .top__voice__content__lists .voice_list_link_name {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1vw;
@@ -2287,13 +2281,13 @@ svg {
   margin: 2.643vw 0 2.5vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1113, _top.scss */
+  /* line 1116, _top.scss */
   .top__voice__content__lists .voice_list_link_name {
     font-size: 2.933vw;
     margin: 5.867vw 0 8vw;
   }
 }
-/* line 1125, _top.scss */
+/* line 1128, _top.scss */
 .top__voice__content__lists .voice_list_link_btn {
   width: max-content;
   overflow: hidden;
@@ -2303,14 +2297,14 @@ svg {
   transition: .35s;
 }
 @media screen and (max-width: 896px) {
-  /* line 1125, _top.scss */
+  /* line 1128, _top.scss */
   .top__voice__content__lists .voice_list_link_btn {
     width: 100%;
     text-align: center;
     padding: 1.6vw 0 1.867vw;
   }
 }
-/* line 1137, _top.scss */
+/* line 1140, _top.scss */
 .top__voice__content__lists .voice_list_link_btn::after {
   content: "";
   display: block;
@@ -2324,7 +2318,7 @@ svg {
   z-index: 1;
   background-color: white;
 }
-/* line 1150, _top.scss */
+/* line 1153, _top.scss */
 .top__voice__content__lists .voice_list_link_btn .txt {
   position: relative;
   z-index: 2;
@@ -2334,23 +2328,23 @@ svg {
   color: white;
 }
 @media screen and (max-width: 896px) {
-  /* line 1150, _top.scss */
+  /* line 1153, _top.scss */
   .top__voice__content__lists .voice_list_link_btn .txt {
     font-size: 3.6vw;
   }
 }
-/* line 1168, _top.scss */
+/* line 1171, _top.scss */
 .top__profile {
   padding: 8.214vw 0;
 }
 @media screen and (max-width: 896px) {
-  /* line 1168, _top.scss */
+  /* line 1171, _top.scss */
   .top__profile {
     padding: 17.333vw 0 14.667vw;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1173, _top.scss */
+  /* line 1176, _top.scss */
   .top__profile .flx {
     display: flex;
     justify-content: center;
@@ -2358,20 +2352,20 @@ svg {
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1173, _top.scss */
+  /* line 1176, _top.scss */
   .top__profile .flx {
     display: block;
     padding: 0 12%;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1184, _top.scss */
+  /* line 1187, _top.scss */
   .top__profile .flx .top__profile__left .sec_ttl_subtxt {
     display: none;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1184, _top.scss */
+  /* line 1187, _top.scss */
   .top__profile .flx .top__profile__left .sec_ttl_subtxt {
     text-align: center;
     color: #b84422;
@@ -2382,52 +2376,52 @@ svg {
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1183, _top.scss */
+  /* line 1186, _top.scss */
   .top__profile .flx .top__profile__left {
     width: 42.929vw;
     margin-right: 5.929vw;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1202, _top.scss */
+  /* line 1205, _top.scss */
   .top__profile .flx .top__profile__right {
     width: 35.714vw;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1202, _top.scss */
+  /* line 1205, _top.scss */
   .top__profile .flx .top__profile__right {
     margin-top: 9.333vw;
   }
 }
-/* line 1209, _top.scss */
+/* line 1212, _top.scss */
 .top__profile .flx .top__profile__right .sec_ttl {
   width: 27.571vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1209, _top.scss */
+  /* line 1212, _top.scss */
   .top__profile .flx .top__profile__right .sec_ttl {
     width: 100%;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1214, _top.scss */
+  /* line 1217, _top.scss */
   .top__profile .flx .top__profile__right .sec_ttl_subtxt {
     font-size: 2.214vw;
     margin-bottom: 3.3vw;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1214, _top.scss */
+  /* line 1217, _top.scss */
   .top__profile .flx .top__profile__right .sec_ttl_subtxt {
     display: none;
   }
 }
-/* line 1222, _top.scss */
+/* line 1225, _top.scss */
 .top__profile .flx .top__profile__right .sec_ttl_subtxt:after {
   display: none;
 }
-/* line 1227, _top.scss */
+/* line 1230, _top.scss */
 .top__profile .flx .top__profile__right__txt {
   font-size: 1vw;
   letter-spacing: 0.3em;
@@ -2436,32 +2430,32 @@ svg {
   margin-top: 1.071vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1227, _top.scss */
+  /* line 1230, _top.scss */
   .top__profile .flx .top__profile__right__txt {
     font-size: 3.2vw;
     line-height: 1.9;
     margin-top: 4.8vw;
   }
 }
-/* line 1239, _top.scss */
+/* line 1242, _top.scss */
 .top__profile .flx .top__profile__right .linklist {
   display: flex;
   margin-top: 3.929vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1239, _top.scss */
+  /* line 1242, _top.scss */
   .top__profile .flx .top__profile__right .linklist {
     margin-top: 5vw;
     justify-content: space-between;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1246, _top.scss */
+  /* line 1249, _top.scss */
   .top__profile .flx .top__profile__right .linklist li {
     width: 23.8%;
   }
 }
-/* line 1250, _top.scss */
+/* line 1253, _top.scss */
 .top__profile .flx .top__profile__right .linklist li a {
   color: #b84422;
   font-size: 1.214vw;
@@ -2475,7 +2469,7 @@ svg {
   font-family: serif;
 }
 @media screen and (max-width: 896px) {
-  /* line 1250, _top.scss */
+  /* line 1253, _top.scss */
   .top__profile .flx .top__profile__right .linklist li a {
     padding: 1.067vw 0 1.333vw;
     letter-spacing: 0.04em;
@@ -2484,37 +2478,37 @@ svg {
     border: 1px solid #b84422;
   }
 }
-/* line 1279, _top.scss */
+/* line 1282, _top.scss */
 .top__contact {
   background-color: white;
   padding: 6.429vw 0;
 }
 @media screen and (max-width: 896px) {
-  /* line 1279, _top.scss */
+  /* line 1282, _top.scss */
   .top__contact {
     padding: 14.667vw 0;
   }
 }
-/* line 1285, _top.scss */
+/* line 1288, _top.scss */
 .top__contact .sec_ttl {
   text-align: center;
   margin: 0 auto;
 }
-/* line 1288, _top.scss */
+/* line 1291, _top.scss */
 .top__contact .sec_ttl_subtxt {
   margin: 0 auto 1.786vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1288, _top.scss */
+  /* line 1291, _top.scss */
   .top__contact .sec_ttl_subtxt {
     margin: 0 auto 2.6vw;
   }
 }
-/* line 1293, _top.scss */
+/* line 1296, _top.scss */
 .top__contact .sec_ttl_subtxt::after {
   display: none;
 }
-/* line 1298, _top.scss */
+/* line 1301, _top.scss */
 .top__contact__txt {
   font-size: 1.429vw;
   letter-spacing: 0.04em;
@@ -2523,65 +2517,65 @@ svg {
   text-align: center;
 }
 @media screen and (max-width: 896px) {
-  /* line 1298, _top.scss */
+  /* line 1301, _top.scss */
   .top__contact__txt {
     font-size: 2.933vw;
     line-height: 1.7;
   }
 }
-/* line 1309, _top.scss */
+/* line 1312, _top.scss */
 .top__contact .flx {
   display: flex;
   justify-content: center;
   margin-top: 2.643vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1309, _top.scss */
+  /* line 1312, _top.scss */
   .top__contact .flx {
     display: block;
     margin-top: 6.933vw;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1317, _top.scss */
+  /* line 1320, _top.scss */
   .top__contact .flx li {
     width: 55vw;
     margin: 0 auto 4vw;
   }
 }
 @media screen and (min-width: 897px) {
-  /* line 1322, _top.scss */
+  /* line 1325, _top.scss */
   .top__contact .flx li:nth-of-type(1) {
     margin-right: 3.5vw;
   }
 }
-/* line 1328, _top.scss */
+/* line 1331, _top.scss */
 .top__contact .flx li:nth-of-type(1) a .txt .ico {
   width: 1.786vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1328, _top.scss */
+  /* line 1331, _top.scss */
   .top__contact .flx li:nth-of-type(1) a .txt .ico {
     width: 4vw;
   }
 }
 @media screen and (max-width: 896px) {
-  /* line 1337, _top.scss */
+  /* line 1340, _top.scss */
   .top__contact .flx li:nth-of-type(2) {
     margin: 0 auto;
   }
 }
-/* line 1343, _top.scss */
+/* line 1346, _top.scss */
 .top__contact .flx li:nth-of-type(2) a .txt .ico {
   width: 2vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1343, _top.scss */
+  /* line 1346, _top.scss */
   .top__contact .flx li:nth-of-type(2) a .txt .ico {
     width: 4vw;
   }
 }
-/* line 1352, _top.scss */
+/* line 1355, _top.scss */
 .top__contact .flx li a {
   color: #b84422;
   text-align: center;
@@ -2595,13 +2589,13 @@ svg {
   padding-bottom: 0.357vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1352, _top.scss */
+  /* line 1355, _top.scss */
   .top__contact .flx li a {
     width: 100%;
     height: 11.467vw;
   }
 }
-/* line 1367, _top.scss */
+/* line 1370, _top.scss */
 .top__contact .flx li a .txt {
   display: flex;
   align-items: center;
@@ -2610,17 +2604,17 @@ svg {
   letter-spacing: 0.08em;
 }
 @media screen and (max-width: 896px) {
-  /* line 1367, _top.scss */
+  /* line 1370, _top.scss */
   .top__contact .flx li a .txt {
     font-size: 4.267vw;
   }
 }
-/* line 1376, _top.scss */
+/* line 1379, _top.scss */
 .top__contact .flx li a .txt .ico {
   margin-right: 0.857vw;
 }
 @media screen and (max-width: 896px) {
-  /* line 1376, _top.scss */
+  /* line 1379, _top.scss */
   .top__contact .flx li a .txt .ico {
     margin-right: 2.133vw;
   }
