@@ -117,3 +117,34 @@
     }
   }
 }
+
+//連続処理
+.fuwafuwa{
+  transform-origin: center;
+  animation: fuwafuwa 20s linear infinite forwards;
+  @include bkp(sp){
+    animation: fuwafuwa 10s linear infinite forwards;
+  }
+}
+@keyframes fuwafuwa {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  25%{
+    transform: translate(0,0) scale(1.05);
+    opacity: .5;
+  }
+  50%{
+    opacity: 1;
+    transform:  scale(1);
+  }
+  75%{
+    transform:  scale(1.05);
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+    transform:  scale(1);
+  }
+}

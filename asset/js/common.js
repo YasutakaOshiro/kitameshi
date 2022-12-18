@@ -50,7 +50,7 @@ function showAccordionFunc() {
 //表示アニメーション
 function scrollAnimFunc() {
   $(window).on("scroll", function () {
-    $(".anim, .fade_y, .svg_anim, .scr_cvr").each(function () {
+    $(".anim, .fade_y, .svg_anim, .scr_cvr , .text_anime").each(function () {
       scr = $(window).scrollTop();
       winHeight = $(window).height();
       action = $(this).offset().top;

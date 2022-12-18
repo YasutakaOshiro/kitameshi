@@ -40,10 +40,10 @@
     position: relative;
     overflow: hidden;
     &_img{
-        width: 144%;
+        width: 100%;
         position: absolute;
-        right: -15.1%;
-        top: -11.4vw;
+        right: 0;
+        top: 0;
         z-index: 1;
     }
 }
@@ -237,8 +237,19 @@
     }
     &__vision{
         padding: 8.9vw 0 7.9vw;
+        position: relative;
         @include bkp(sp){
             padding: 12vw 0 16vw;
+        }
+        &__deco{
+            @include bkp(sp){
+                width: 100%;
+                position: absolute;
+                right: 0;
+                top: -77.333vw;
+                z-index: 1;
+                opacity: .7;
+			}
         }
         &__txtbox{
             position: relative;
@@ -263,6 +274,8 @@
                 width: max-content;
                 @include bkp(sp){
                     padding:0 12%;
+                    z-index: 2;
+                    position: relative;
                 }
             }
             &__ttl02{
@@ -287,6 +300,7 @@
                     right: 12%;
                     font-weight: normal;
                     top: 8.9vw;
+                    z-index: 2;
                     .bg_wht{
                         height: max-content;
                         display: block;
@@ -312,12 +326,16 @@
                     font-size: 3.2vw;
                     margin-top: 6.7vw;
                     width: 100%;
+                    position: relative;
+                    z-index: 2;
                     letter-spacing: 1.5px;
                 }
             }
             .base_btn{
                 @include bkp(sp){
                     margin:0 auto 0 12%;
+                    position: relative;
+                    z-index: 2;
                 }
             }
         }
@@ -325,6 +343,8 @@
     &__achievement{
         padding: 0 0 13.6vw;
         @include bkp(sp){
+            position: relative;
+            z-index: 2;
             padding: 0 12vw 15vw;
         }
        .sec_ttl{
@@ -354,8 +374,18 @@
             @include bkp(sp){
                 margin: 15.5vw auto 0;
             }
+            &.on{
+                .slick-arrow{
+                    opacity: 1;
+                }
+                .slick-arrow{
+                    opacity: 1;
+                }
+            }
             .slick-arrow{
                 width: 3.2vw;
+                opacity: 0;
+                transition: .3s;
                 @include bkp(sp){
                     width: 5vw;
                 }
@@ -386,6 +416,8 @@
                 letter-spacing: 1.3px;
                 display: flex;
                 align-items: center;
+                opacity: 0;
+                transition: .3s;
                 @include bkp(sp){
                     font-size: 3.7vw;
                     right: 14.5vw;
@@ -489,7 +521,7 @@
             .sec_ttl{
                 text-align: center;
                 &_subtxt{
-                    margin: 0 auto 25px;
+                    margin: 0 auto 1.786vw;
                     @include bkp(sp){
                         margin: 0 auto 2.6vw;
                     }
@@ -516,7 +548,7 @@
                         color: $color01;
                         display: block;
                         width: max-content;
-                        margin: 5px auto 0;
+                        margin: 1.333vw auto 0;
                         padding: 1.067vw 3.2vw;
                         &:before{
                             background-color: white;
@@ -546,10 +578,10 @@
             }
             &__ttl{
                 .en{
-                    font-size: 1.071vw;
+                    font-size: 1.429vw;
                     color: $color01;
                     letter-spacing: 0.04em;
-                    margin-bottom: 1.429vw;
+                    margin-bottom: 1.3vw;
                     font-family: $ff;
                     display: block;
                     font-weight: normal;
@@ -1151,6 +1183,9 @@
             }
             .top__profile__left{
                 .sec_ttl_subtxt{
+                    @include bkp(pc){
+                        display: none;
+                    }
                     @include bkp(sp){
                         text-align: center;
                         color: $color01;
