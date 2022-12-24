@@ -47,6 +47,24 @@ function showAccordionFunc() {
   });
 }
 
+function fixSpanTag(){
+  //spanタグを追加する
+  var element = $(".eachTextAnime");
+  element.each(function () {
+    var text = $(this).text();
+    var textbox = "";
+    text.split('').forEach(function (t, i) {
+      if (t !== " ") {
+        textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+      } else {
+        textbox += t;
+      }
+    });
+    $(this).html(textbox);
+  });
+}
+
+
 //表示アニメーション
 function scrollAnimFunc() {
   $(window).on("scroll", function () {
@@ -206,6 +224,7 @@ $(function () {
 //ページの全データを読み込み後
 $(window).on("load", function () {
   loadedPageFunc();
+  fixSpanTag();
   var w = $(window).width();
   var x = 896;
   if (w > x) {
@@ -285,10 +304,12 @@ $('#slider01').slick({
 	slidesToScroll: 1,
 	autoplay: true,
   fade: true,
+  dots: true, 
+  appendDots: $('.dots01'),
 	autoplaySpeed: 4000,
 	//個別でarrowを追加
-	prevArrow: '<div class="slick-prev slick-arrow ablt"><img src="../../asset/img/top/ico_achievement_prev01.png" alt="prev"></div>',
-	nextArrow: '<div class="slick-next slick-arrow ablt"><img src="../../asset/img/top/ico_achievement_next01.png" alt="next"></div>',
+	prevArrow: '<div class="slick-prev slick-arrow ablt"><img src="asset/img/top/ico_achievement_prev01.png" alt="prev"></div>',
+	nextArrow: '<div class="slick-next slick-arrow ablt"><img src="asset/img/top/ico_achievement_next01.png" alt="next"></div>',
 	responsive: [
 		{
 			breakpoint: 896,
@@ -309,8 +330,8 @@ if (w < 896) {
     fade: true,
     autoplaySpeed: 4000,
     //個別でarrowを追加
-    prevArrow: '<div class="slick-prev slick-arrow ablt"><img src="../../asset/img/top/ico_achievement_prev01.png" alt="prev"></div>',
-    nextArrow: '<div class="slick-next slick-arrow ablt"><img src="../../asset/img/top/ico_achievement_next01.png" alt="next"></div>',
+    prevArrow: '<div class="slick-prev slick-arrow ablt"><img src="asset/img/top/ico_achievement_prev01.png" alt="prev"></div>',
+    nextArrow: '<div class="slick-next slick-arrow ablt"><img src="asset/img/top/ico_achievement_next01.png" alt="next"></div>',
     responsive: [
       {
         breakpoint: 896,
@@ -327,9 +348,11 @@ if (w < 896) {
     autoplay: false,
     autoplaySpeed: 10000,
     fade: true ,
+    dots: true, 
+    appendDots: $('.dots02'),
     //個別でarrowを追加
-    prevArrow: '<div class="slick-prev slick-arrow ablt"><img src=../../../asset/img/top/ico_prev_white01.png" alt="prev"></div>',
-    nextArrow: '<div class="slick-next slick-arrow ablt"><img src=../../../asset/img/top/ico_next_white01.png" alt="next"></div>',
+    prevArrow: '<div class="slick-prev slick-arrow ablt"><img src="asset/img/top/ico_prev_white01.png" alt="prev"></div>',
+    nextArrow: '<div class="slick-next slick-arrow ablt"><img src="asset/img/top/ico_next_white01.png" alt="next"></div>',
   });
   $('.close_modal').click(function(){
     $('.close_modal').fadeOut();
