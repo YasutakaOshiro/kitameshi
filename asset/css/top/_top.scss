@@ -174,9 +174,10 @@
             //     transform-origin:center center;
             //     border-radius: 50%;
             // }
-            .txt{
-                position: relative;
-                z-index: 2;
+            span{
+                @include bkp(sp){
+                    font-size: 3.5vw;
+                }
             }
         }
         &__contact{
