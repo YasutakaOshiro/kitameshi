@@ -145,6 +145,101 @@ $breakpoints: (
   opacity: 0;
   filter: blur(10px);
   &.on{
-    animation: text_anime .8s linear forwards;
+    animation: text_anime .7s linear forwards;
+  }
+}
+
+
+
+// slickドット
+.dots01 .slick-dots {
+  text-align: center;
+  margin-top: 4vw;
+  @include bkp(sp){
+    margin-top: 7vw;
+  }
+}
+.dots01 .slick-dots li {
+  display: inline-block;
+}
+.dots01 .slick-dots button {
+  display: block;
+  width: 0.714vw;
+  height: 0.714vw;
+  margin: 0.429vw;
+  font-size: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background: #bcbcbc;
+  border-radius: 50%;
+  @include bkp(sp){
+    width: 2vw;
+    height: 2vw;
+    margin: 1.7vw;
+  }
+}
+.dots01 .slick-dots .slick-active button {
+  background: $color01;
+}
+// slickドット
+.dots02 .slick-dots {
+  text-align: center;
+  margin-top: 4vw;
+  @include bkp(sp){
+    margin-top: 7vw;
+  }
+}
+.dots02 .slick-dots li {
+  display: inline-block;
+}
+.dots02 .slick-dots button {
+  display: block;
+  width: 0.714vw;
+  height: 0.714vw;
+  margin: 0.429vw;
+  font-size: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  opacity: .5;
+  border-radius: 50%;
+  @include bkp(sp){
+    width: 2vw;
+    height: 2vw;
+    margin: 1.7vw;
+  }
+}
+.dots02 .slick-dots .slick-active button {
+  background: white;
+  opacity: 1;
+}
+
+.externallink{
+  padding-right: 1.714vw;
+  position: relative;
+  @include bkp(sp){
+    padding-right: 4.1vw;
+  }
+  &::before{
+    content: ""; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right:0;
+    top: 50%;
+    transform: translate(0,-50%);
+    background: url(../../../asset/img/common/ico_external01.png)no-repeat;
+    background-size: contain;
+    width: 1.286vw;
+    height: 1.286vw;
+    @include bkp(sp){
+      width: 3.5vw;
+      height: 3.5vw;
+    }
   }
 }

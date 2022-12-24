@@ -4,6 +4,8 @@
 .bg_wrap{
     background: url(../../../asset/img/top/bg01.png);
     background-size: 100%;
+    position: relative;
+    z-index: 1;
 }
 .base_btn{
     width: max-content;
@@ -41,9 +43,11 @@
     &_img{
         width: 100%;
         position: absolute;
+        opacity: .5;
         right: 0;
         top: 0;
         z-index: 1;
+        animation: kemuri 8s infinite;
     }
 }
 .sec_ttl{
@@ -86,12 +90,16 @@
 }
 .top {
     &__mv{
-        position: relative;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 0;
         &__img{
             img{
                 height: 100vh;
                 object-fit: cover;
-                object-position: top;
+                object-position: bottom;
             }
         }
         &__txt{
@@ -99,6 +107,23 @@
             position: absolute;
             top: 9.6vw;
             right: 21.4vw;
+            img{
+                position: relative;
+                z-index: 2;
+            }
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 200%;
+                height: 160%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.2);
+                filter: blur(35px);
+                z-index: 1;            
+            }
             @include bkp(sp){
                 width: 16vw;
                 top: 32.5vw;
@@ -112,24 +137,42 @@
             left: 50%;
             transform: translate(-50%,0);
             bottom: 9.6vw;
-            font-size: 0.9vw;
+            font-size: 1.1vw;
             letter-spacing: 1px;
             @include bkp(sp){
                 font-size: 1.7vw;
                 bottom: 31.6vw;
             }
-            &::after{
+            &::before{
                 content: "";
-                display: block;
                 position: absolute;
-                width: 200%;
-                height: 200%;
+                top: 1.429vw;
+                width: 0.071vw;
+                height: 2.143vw;
+                background: white;
+                animation: pathmove 1.4s ease-in-out infinite;
+                opacity:0;
                 left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-                background-color: rgba(0, 0, 0, 0.3);
-                filter: blur(35px);
-                z-index: -1;
+                transform: translate(-50%,0);
+            }
+            // &::after{
+            //     content: "";
+            //     display: block;
+            //     position: absolute;
+            //     width: 5vw;
+            //     height: 5vw;
+            //     left: 50%;
+            //     top: 50%;
+            //     background-color: rgba(184 , 68 , 34 , 0.6);
+            //     filter: blur(5px);
+            //     animation: circleScale 3s infinite;
+            //     z-index: 1;
+            //     transform-origin:center center;
+            //     border-radius: 50%;
+            // }
+            .txt{
+                position: relative;
+                z-index: 2;
             }
         }
         &__contact{
@@ -152,6 +195,15 @@
                 width: 2.3vw;
                 display: block;
                 margin-top: 1.3vw;
+                img{
+                    transition: .4s;
+                }
+                &:hover{
+                    img{
+                        transition: .3s ease;
+                        transform: scale(1.1);
+                    }
+                }
                 @include bkp(sp){
                     width: 4.8vw;
                     margin-top: 2.5vw;
@@ -169,6 +221,9 @@
         background: url(../../../asset/img/top/bg_concept01.png)no-repeat;
         background-size: cover;
         padding: 5.7vw 0;
+        margin-top: 100vh;
+        position: relative;
+        z-index: 1;
         @include bkp(sp){
             background: url(../../../asset/img/top/bg_concept01_sp.png)no-repeat;
             background-size: cover;
@@ -227,9 +282,72 @@
                 .strong{
                     font-size: 1.8vw;
                     font-weight: 600;
+                    transform: scale(1.04);
+                    filter: blur(12px);
+                    opacity: 0;
+                    transition: .8s linear;
+                    mix-blend-mode: color-burn;
                     @include bkp(sp){
                         font-size: 5.3vw;
                     }
+                    &.p01{
+                        transition: 1.2s .4s ease-in-out;
+                    }
+                    &.p02{
+                        transition: 1.2s 3s ease-in-out;
+                    }
+                }
+                span.smoothText{
+                    &.p01{
+                        span.anim{
+                            transition: .75s ease-in-out;
+                        }
+                    }
+                    &.p02{
+                        span.anim{
+                            transition: .75s 1.2s ease-in-out;
+                        }
+                    }
+                    &.p03{
+                        span.anim{
+                            transition: .75s 1.8s ease-in-out;
+                        }
+                    }
+                    &.p04{
+                        span.anim{
+                            transition: .75s 2.4s ease-in-out;
+                        }
+                    }
+                    &.p05{
+                        span.anim{
+                            transition: .75s 4s ease-in-out;
+                        }
+                    }
+
+                }
+            }
+        }
+        &.on{
+            .strong{
+                font-weight: 600;
+                transform: scale(1);
+                filter: blur(0);
+                opacity: 1;
+                mix-blend-mode: initial;
+            }
+            span.smoothText {
+                span.anim{
+                    transform: translate3d(0,0,0) skewY(0) rotateY(0);
+                    filter: blur(0) ;
+                    opacity: 1;
+                    mix-blend-mode: initial;
+                }
+                .strong{
+                    font-weight: 600;
+                    transform: scale(1);
+                    filter: blur(0);
+                    opacity: 1;
+                    mix-blend-mode: initial;
                 }
             }
         }
@@ -319,7 +437,7 @@
                 letter-spacing: 2px;
                 color: $color02;
                 margin: 1.5vw 0 3.9vw;
-                width: max-content;
+                width: 34.286vw;
                 @include bkp(sp){
                     padding:0 12%;
                     font-size: 3.2vw;
@@ -571,7 +689,7 @@
         }
         &__flow{
             width: 74.643vw;
-            margin: 10.714vw auto 0;
+            margin: 6.714vw auto 0;
             @include bkp(sp){
                 width: 76%;
             }
@@ -698,7 +816,6 @@
                         font-weight: normal;
                         color: $color01;
                         letter-spacing: 0.06em;
-                        font-family: "Noto Sans JP", sans-serif;
                         @include bkp(sp){
                             writing-mode: vertical-lr;
                             color: $color02;
@@ -738,7 +855,6 @@
                     &__txt{
                         text-align: center;
                         color: $color02;
-                        font-family: "Noto Sans JP", sans-serif;
                         line-height: 1.85;
                         letter-spacing: 0.04em;
                         margin-top: 1.5vw;
@@ -1106,7 +1222,6 @@
                             letter-spacing: 0.08em;
                             line-height: 1.9;
                             margin-top: 2.143vw;
-                            font-family: "Noto Sans JP", sans-serif;
                             @include bkp(sp){
                                 font-size: 3.2vw;
                                 margin-top: 6.4vw;
@@ -1114,7 +1229,6 @@
                             }
                         }
                         &_name{
-                            font-family: "Noto Sans JP", sans-serif;
                             font-size: 1vw;
                             color: white;
                             letter-spacing: 0.1em;
@@ -1229,7 +1343,7 @@
                 }
                 &__txt{
                     font-size: 1vw;
-                    letter-spacing: 0.3em;
+                    letter-spacing: 0.2em;
                     line-height: 2.15;
                     color: #4f1a05;
                     margin-top: 1.071vw;
@@ -1319,7 +1433,7 @@
             }
             li{
                 @include bkp(sp){
-                    width: 55vw;
+                    width: 58vw;
                     margin: 0 auto 4vw;
                 }
                 &:nth-of-type(1){
@@ -1332,6 +1446,7 @@
                                 width: 1.786vw;
                                 @include bkp(sp){
                                     width: 4vw;
+                                    left: -1.2vw;
                                 }
                             }
                         }
@@ -1355,32 +1470,47 @@
                 a{
                     color: $color01;
                     text-align: center;
-                    width: 26.857vw;
+                    width: 29.857vw;
                     display: block;
                     border: 2px solid $color01;
-                    height: 5vw;
+                    position: relative;
+                    height: 6.7vw;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     padding-bottom: 0.357vw;
                     @include bkp(sp){
                         width: 100%;
-                        height: 11.467vw;
+                        height: 14.467vw;
                     }
                     .txt{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         font-size: 2.214vw;
                         letter-spacing: 0.08em;
+                        position: relative;
+                        display: inline-block;
+                        padding-left: 3vw;
                         @include bkp(sp){
                             font-size: 4.267vw;
                         }
                         .ico{
+                            position: absolute;
+                            top: 50%;
+                            left: -0.3vw;
+                            transform: translate(0,-50%);
                             margin-right: 0.857vw;
                             @include bkp(sp){
                                 margin-right: 2.133vw;
+                                left: -2.3vw;
                             }
+                        }
+                    }
+                    .small{
+                        font-size: 1.286vw;
+                        display: block;
+                        margin-top: 0.643vw;
+                        @include bkp(sp){
+                            font-size: 2.986vw;
+                            margin-top: 1.643vw;
                         }
                     }
                 }
