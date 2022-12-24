@@ -243,3 +243,52 @@ $breakpoints: (
     }
   }
 }
+
+
+.loadfade{
+  position: fixed;
+  top: -30vw;
+  left: -30%;
+  width: 200%;
+  z-index: 99999999;
+  height: 200vh;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  background-color: white;
+  filter: blur(30px);
+}
+
+
+
+/*== 背景が流れる（中央から縦全体） */
+.bgcentery{
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 2;
+      /*色や形状*/
+    background: $color01;
+    width: 300%;
+    height: 300%;
+      /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(1, 0) rotate(20deg) translate(-50%,-50%);
+    transform-origin:50% , 50%;
+  }
+  span{
+    transition: .6s ease;
+  }
+  /*hoverした際の形状*/
+  &:hover{
+    span{
+      color: white;
+    }
+    &:before{
+    transform:scale(1, 1) rotate(20deg) translate(-50%,-50%);
+    }
+  }
+}

@@ -68,7 +68,7 @@ function fixSpanTag(){
 //表示アニメーション
 function scrollAnimFunc() {
   $(window).on("scroll", function () {
-    $(".anim, .fade_y, .svg_anim, .scr_cvr , .text_anime").each(function () {
+    $(".anim, .fade_y, .svg_anim, .scr_cvr , .text_anime , .fade_x_right , .fade_x_left , .scale_y_img , .scale_x_img").each(function () {
       scr = $(window).scrollTop();
       winHeight = $(window).height();
       action = $(this).offset().top;
@@ -266,22 +266,20 @@ $(window).on("resize", function () {});
 //スクロール途中で全画面の背景固定
 //****************************
 
-// $(window).on('scroll', function () {
-// 	scr = $(window).scrollTop();
-// 	wrap = $('.fix_bg_wrap').offset().top;
-// 	wrapHeight = $('.fix_bg_wrap').outerHeight();
-// 	winHeight = $(window).outerHeight();
+$(window).on('scroll', function () {
+	scr = $(window).scrollTop();
+  if($('.top__concept').length){
+    wrap = $('.top__concept').offset().top;
+  }
+	wrapHeight = $('.top__concept').outerHeight();
+	winHeight = $(window).outerHeight();
 
-// 	if (scr > wrap + wrapHeight - winHeight) {
-// 		$('.fix_bg').removeClass('fixed');
-// 		$('.fix_bg').addClass('bottom');
-// 	} else if (scr > wrap) {
-// 		$('.fix_bg').addClass('fixed');
-// 		$('.fix_bg').removeClass('bottom');
-// 	} else if (scr < wrap) {
-// 		$('.fix_bg').removeClass('fixed');
-// 	}
-// });
+	if (scr > wrap) {
+		$('.top__concept__bgimg').addClass('fixed');
+	} else if (scr < wrap) {
+		$('.top__concept__bgimg').removeClass('fixed');
+	}
+});
 
 //****************************
 //slickの基本処理（レスポンシブ）

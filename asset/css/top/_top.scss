@@ -19,6 +19,10 @@
         font-size: 3vw;
         padding: 1.5vw 5.4vw 1.5vw 2.9vw;
     }
+    span{
+        position: relative;
+        z-index: 2;
+    }
     &::after{
         content: ""; 
         display: block;
@@ -218,22 +222,38 @@
         }
     }
     &__concept{
-        background: url(../../../asset/img/top/bg_concept01.png)no-repeat;
-        background-size: cover;
         padding: 5.7vw 0;
         margin-top: 100vh;
         position: relative;
-        z-index: 1;
         @include bkp(sp){
-            background: url(../../../asset/img/top/bg_concept01_sp.png)no-repeat;
-            background-size: cover;
             padding: 18vw 0;
+        }
+        &__bgimg{
+            background: url(../../../asset/img/top/bg_concept01.png)no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &.fixed{
+                position: fixed;
+            }
+            @include bkp(sp){
+                background: url(../../../asset/img/top/bg_concept01_sp.png)no-repeat;
+                background-size: cover;
+                padding: 18vw 0;
+            }
         }
         &__txtbox{
             width: 54%;
             margin: 0 auto;
             position: relative;
             color: white;
+            position: relative;
+            z-index: 3;
             @include bkp(sp){
                 width: 76%;
                 min-width: 308px;
@@ -374,12 +394,27 @@
             @include bkp(sp){
               padding: 0;
             }
+            &.on{
+                .top__vision__txtbox__ttl01,
+                .top__vision__txtbox__ttl02,
+                .top__vision__txtbox__txt,
+                .base_btn{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                .top__vision__txtbox__img{
+                    opacity: 1;
+                    @include bkp(pc){
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
             &__img{
                 @include bkp(pc){
+                    transform: translate(-11%, -50%);
                     position: absolute;
                     right: 0;
                     top: 45%;
-                    transform: translate(0,-50%);
                     width: 52vw;
                 }
                 @include bkp(sp){
@@ -427,6 +462,19 @@
                         letter-spacing: 2.5px;
                         &:nth-of-type(1){
                             margin-right: 0;
+                        }
+                    }
+                }
+                .scr_cvr{
+                    &::before{
+                        background-color: $color01;
+                    }
+                    &.on{
+                        &::before{
+                            @include bkp(sp){
+                                right: 0;
+                                top: 100%;
+                            }
                         }
                     }
                 }
@@ -1075,7 +1123,7 @@
                                 }
                             }
                             &_ttl{
-                                font-size: 4.8vw;
+                                font-size: 4.6vw;
                                 text-align: center;
                                 color: white;
                                 font-weight: normal;
