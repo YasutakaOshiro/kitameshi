@@ -1,6 +1,18 @@
 @charset "utf-8";
 @import "compass/css3/";
-
+// サファリのみここから
+::-webkit-full-page-media, :future, :root .top__voice__content__lists .voice_list_link_btn {
+    padding: 0.59vw 0.571vw 0.429vw;
+    @include bkp(sp){
+        padding: 1.69vw 0 1.03vw;
+    }
+}
+::-webkit-full-page-media, :future, :root .base_btn .txt {
+    @include bkp(sp){
+        padding: 1.7vw 6.2vw 1.5vw 2.9vw;
+    }
+}
+// サファリのみここまで
 .bg_wrap{
     background: url(../../../asset/img/top/bg01.png);
     background-size: 100%;
@@ -9,37 +21,89 @@
 }
 .base_btn{
     width: max-content;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $color01;
     border: 1px solid $color01;
-    font-size: 1.4vw;
     position: relative;
-    padding: 0.8vw 3.3vw 0.8vw 1.5vw;
-    @include bkp(sp){
-        font-size: 3vw;
-        padding: 1.5vw 5.4vw 1.5vw 2.9vw;
-    }
-    span{
-        position: relative;
-        z-index: 2;
-    }
-    &::after{
-        content: ""; 
+    overflow: hidden;
+    .txt{
+        font-size: 1.4vw;
+        padding: 0.8vw 2.9vw 0.8vw 1.5vw;
         display: block;
-        position: absolute;
-        background: url(../../../asset/img/top/ico_arrow01.png)no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 0.7vw;
-        height: 1.4vw;
-        right: 1.3vw;
-        top: 50%;
-        transform: translate(0,-50%);  
+        position: relative;
+        right: 0;
+        transition: 0.4s ease-Out;
+        width: 100%;
         @include bkp(sp){
-            width: 1.3vw;
-            height: 2.7vw;
-            right: 2.7vw;
-        }     
+            padding: 1.5vw 6.2vw 1.5vw 2.9vw;
+            font-size: 3vw;
+        }
+        &:after{
+            content: ""; 
+            background: url(../../../asset/img/common/ico_btn_arrow02.png)no-repeat;
+            background-size: contain;
+            height: 1.214vw;
+            width: 0.714vw;
+            display: block;
+            position: absolute;
+            color: $color01;
+            font-size: 1.286vw;
+            right: 1.586vw;
+            top: 52%;
+            transform: translate(0,-50%);
+            @include bkp(sp){
+                height: 2.814vw;
+                width: 1.914vw;
+                right: 2.586vw;
+            }
+        }
+    }
+    &:hover{
+        @include bkp(pc){
+            .txt{
+                position: relative;
+                right: -100%;
+                transition: 0.32s ease-Out;
+            }
+            .hoverContent{
+                left: 0;
+                visibility: visible;
+                transition: 0.32s ease-Out;
+                &_txt{
+                    &:nth-of-type(1){
+                        left: 48%;
+                        transition: 0.32s 0.4s ease-Out;
+                    }
+                    &:nth-of-type(2){
+                        left: 52%;
+                        transition: 0.32s 0.4s ease-Out;
+                    }
+                }
+            }
+        }
+    }
+    .hoverContent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $color01;
+        color: white;
+        left: -100%;
+        transition: 0.32s ease-Out;
+        top: 0;
+        z-index: 2;
+        visibility: hidden;
+        &_txt{
+            width: 1.57vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 2px solid $color01;
+            transition: 0.2s ease-Out;
+            transform: translate(-50%,-50%);
+        }
     }
 }
 .deco_wrap{
@@ -59,7 +123,7 @@
     color: $color01;
     font-family: $ff;
     font-weight: normal;
-    letter-spacing: 5px;
+    letter-spacing:0.06em;
     @include bkp(sp){
         font-size: 9.6vw;
     }
@@ -67,13 +131,12 @@
         position: relative;
         font-family: $ff02;
         font-size: 1.429vw;
-        letter-spacing: 3px;
+        letter-spacing:0.06em;
         width: max-content;
         display: block;
         margin-bottom: 1.4vw;
         @include bkp(sp){
             font-size: 3vw;
-            letter-spacing: 2px;
             margin-bottom: 2.6vw;
         }
         &::after{
@@ -81,7 +144,7 @@
             display: block;
             position: absolute;
             width: 18vw;
-            height: 1px;
+            height:0.071vw;
             right: -19.3vw;
             top: 50%;
             transform: translate(0,-50%);            
@@ -142,7 +205,7 @@
             transform: translate(-50%,0);
             bottom: 9.6vw;
             font-size: 1.1vw;
-            letter-spacing: 1px;
+            letter-spacing: .07em;
             @include bkp(sp){
                 font-size: 1.7vw;
                 bottom: 31.6vw;
@@ -159,21 +222,6 @@
                 left: 50%;
                 transform: translate(-50%,0);
             }
-            // &::after{
-            //     content: "";
-            //     display: block;
-            //     position: absolute;
-            //     width: 5vw;
-            //     height: 5vw;
-            //     left: 50%;
-            //     top: 50%;
-            //     background-color: rgba(184 , 68 , 34 , 0.6);
-            //     filter: blur(5px);
-            //     animation: circleScale 3s infinite;
-            //     z-index: 1;
-            //     transform-origin:center center;
-            //     border-radius: 50%;
-            // }
             span{
                 @include bkp(sp){
                     font-size: 3.5vw;
@@ -190,7 +238,7 @@
                 margin: auto;
                 writing-mode:vertical-rl;
                 color: white;
-                letter-spacing: 6px;
+                letter-spacing: 0.18em;
                 font-size: 1.4vw;
                 @include bkp(sp){
                     font-size: 3.2vw;
@@ -268,7 +316,7 @@
                 }
                 font-weight: normal;
                 font-size: 1.4vw;
-                letter-spacing: 3px;
+                letter-spacing: .18em;
                 font-family: $ff;
                 @include bkp(sp){
                     padding-left: 6.6vw;
@@ -276,6 +324,17 @@
                     font-size: 3.2vw;
                 }
                 &:after{
+                    @include bkp(pc){
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 2.1vw;
+                        width: 0.1vw;
+                        left: 50%;
+                        top: -3vw;
+                        background-color: white;
+                        transform: translate(-50%, 0);
+                    }
                     @include bkp(sp){
                         content: ""; 
                         display: block;
@@ -292,12 +351,13 @@
             &__txt{
                 font-size: 1.4vw;
                 line-height: 2;
-                letter-spacing: 2px;
+                letter-spacing: .08em;
                 @include bkp(pc){
                     padding-left: 3.6vw;
                 }
                 @include bkp(sp){
                     font-size: 3.2vw;
+                    letter-spacing: 0.07em;
                     margin-top: 10vw;
                 }
                 .strong{
@@ -483,7 +543,7 @@
             &__txt{
                 font-size: 1vw;
                 line-height: 1.9;
-                letter-spacing: 2px;
+                letter-spacing: 0.08em;
                 color: $color02;
                 margin: 1.5vw 0 3.9vw;
                 width: 34.286vw;
@@ -494,7 +554,6 @@
                     width: 100%;
                     position: relative;
                     z-index: 2;
-                    letter-spacing: 1.5px;
                 }
             }
             .base_btn{
@@ -871,6 +930,7 @@
                             font-family: inherit;
                             font-size: 5.867vw;
                             letter-spacing: 0.16em;
+                            white-space: nowrap;
                         }
                         &__index{
                             background-color: $color01;
@@ -1014,6 +1074,8 @@
                 &:hover{
                     letter-spacing: 0.2em;
                     transition: .3s linear;
+                    background-color: $color01;
+                    color: white;
                     &::after{
                         right: 0;
                         bottom: 0;
@@ -1236,7 +1298,6 @@
                                 }
                             }
                             .voice_list_link_btn{
-                                border: 1px solid $color01;
                                 &::after{
                                     left: 0;
                                 }
@@ -1293,7 +1354,7 @@
                             overflow: hidden;
                             position: relative;
                             border: 1px solid white;
-                            padding: 0.286vw 0.571vw 0.429vw;
+                            padding: 0.386vw 0.571vw 0.429vw;
                             transition: .35s;
                             @include bkp(sp){
                                 width: 100%;
@@ -1307,8 +1368,7 @@
                                 width: 100%;
                                 height: 100%;
                                 left: -100%;
-                                top: 50%;
-                                transform: translate(0,-50%);
+                                top: 0;
                                 transition: .35s;
                                 z-index: 1;
                                 background-color: white;
@@ -1415,21 +1475,47 @@
                         }
                         a{
                             color: $color01;
-                            font-size: 1.214vw;
                             text-align: center;
                             width: 8.286vw;
                             letter-spacing: 0.08em;
                             display: block;
-                            padding: 0.286vw 0.5vw 0.357vw;
                             border: 2px solid $color01;
                             margin-right: 0.5vw;
                             font-family: serif;
                             @include bkp(sp){
-                                padding: 1.067vw 0 1.333vw;
                                 letter-spacing: 0.04em;
                                 width: 100%;
-                                font-size: 2.933vw;
                                 border: 1px solid $color01;
+                            }
+                            .txt{
+                                font-size: 1.214vw;
+                                padding: 0.486vw 0.5vw 0.357vw;
+                                @include bkp(sp){
+                                    font-size: 2.933vw;
+                                    padding: 1.1vw 0;
+                                }
+                                &:after{
+                                    display: none;
+                                }
+                            }
+                            &:hover{
+                                @include bkp(pc){
+                                    .hoverContent{
+                                        &_txt{
+                                            &:nth-of-type(1){
+                                                left: 45%;
+                                            }
+                                            &:nth-of-type(2){
+                                                left: 55%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .hoverContent{
+                                &_txt{
+                                    width: 1.3vw;
+                                }
                             }
                         }
                         &:nth-of-type(1) , &:nth-of-type(4) {
@@ -1537,9 +1623,14 @@
                         letter-spacing: 0.08em;
                         position: relative;
                         display: inline-block;
-                        padding-left: 3vw;
+                        padding: 0 0 0 3vw;
+                        width: auto;
                         @include bkp(sp){
+                            padding: 0 0 0 3vw;
                             font-size: 4.267vw;
+                        }
+                        &::after{
+                            display: none;
                         }
                         .ico{
                             position: absolute;
@@ -1551,6 +1642,11 @@
                                 margin-right: 2.133vw;
                                 left: -2.3vw;
                             }
+                        }
+                    }
+                    .hoverContent{
+                        &_txt{
+                            width: 2.27vw;
                         }
                     }
                     .small{
