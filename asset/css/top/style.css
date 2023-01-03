@@ -698,20 +698,67 @@ svg {
   }
 }
 
-/* line 248, ../_module.scss */
-.loadfade {
+/* line 247, ../_module.scss */
+.loadfadebg {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200%;
-  z-index: 99999999;
-  height: 200vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+  height: 100vh;
   opacity: 1;
   visibility: visible;
   transition: 1s;
-  background-color: white;
-  filter: blur(30px);
+  background-color: #f2e8e2;
+}
+
+/* line 259, ../_module.scss */
+.loadfade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  background-color: #b84422;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 284, ../_module.scss */
+.loadfade_wrap {
+  opacity: 0;
+}
+/* line 287, ../_module.scss */
+.loadfade_logo {
+  width: 15.6vw;
+  margin: 0 auto;
+}
+@media screen and (max-width: 896px) {
+  /* line 287, ../_module.scss */
+  .loadfade_logo {
+    width: 49.833vw;
+  }
+}
+/* line 294, ../_module.scss */
+.loadfade_txt {
+  text-align: center;
+  font-size: 1.4vw;
+  color: white;
+  margin-top: 1.3vw;
+  padding-left: 1.2vw;
+}
+@media screen and (max-width: 896px) {
+  /* line 294, ../_module.scss */
+  .loadfade_txt {
+    font-size: 4.2vw;
+    margin-top: 4.4vw;
+    padding-left: 4vw;
+    letter-spacing: 0.12em;
+  }
 }
 
 /*== 背景が流れる（中央から縦全体） */
@@ -1018,24 +1065,59 @@ span.smoothText span.anim {
     opacity: 0;
   }
 }
-/* line 155, ../_states.scss */
+@keyframes openingBg {
+  0% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(101%);
+    visibility: hidden;
+  }
+}
+@keyframes openingContent {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* line 175, ../_states.scss */
 body.loaded .top__mv__scroll.eachTextAnime span {
   animation: text_anime_on 1.5s ease-out infinite forwards;
 }
-/* line 156, ../_states.scss */
+/* line 176, ../_states.scss */
 body.loaded .loadfade {
-  opacity: 0;
-  visibility: hidden;
-  filter: blur(0);
+  animation: openingBg 1.7s ease forwards;
+}
+/* line 178, ../_states.scss */
+body.loaded .loadfade_wrap {
+  animation: openingContent 1.7s ease forwards;
+}
+/* line 182, ../_states.scss */
+body.loaded .loadfadebg {
+  animation: openingBg 1.7s .06s ease forwards;
 }
 
-/* line 164, ../_states.scss */
+/* line 188, ../_states.scss */
 .fuwafuwa {
   transform-origin: center;
   animation: fuwafuwa 20s linear infinite forwards;
 }
 @media screen and (max-width: 896px) {
-  /* line 164, ../_states.scss */
+  /* line 188, ../_states.scss */
   .fuwafuwa {
     animation: fuwafuwa 10s linear infinite forwards;
   }
@@ -1159,54 +1241,54 @@ body.loaded .loadfade {
     opacity: 0;
   }
 }
-/* line 307, ../_states.scss */
+/* line 331, ../_states.scss */
 .fade_x_left {
   transform: translateX(-50px);
   opacity: 0;
   transition: .7s;
 }
-/* line 311, ../_states.scss */
+/* line 335, ../_states.scss */
 .fade_x_left.on {
   opacity: 1;
   transform: translateX(0%);
 }
 
-/* line 317, ../_states.scss */
+/* line 341, ../_states.scss */
 .fade_x_right {
   transform: translateX(50px);
   opacity: 0;
   transition: .7s;
 }
-/* line 321, ../_states.scss */
+/* line 345, ../_states.scss */
 .fade_x_right.on {
   opacity: 1;
   transform: translateX(0%);
 }
 
-/* line 327, ../_states.scss */
+/* line 351, ../_states.scss */
 .scale_y_img {
   transform: scaleY(0);
   transform-origin: top;
   transition: .7s .3s;
 }
-/* line 331, ../_states.scss */
+/* line 355, ../_states.scss */
 .scale_y_img.on {
   transform: scaleY(1);
 }
 
-/* line 335, ../_states.scss */
+/* line 359, ../_states.scss */
 .scale_x_img {
   transform: scaleX(0);
   transform-origin: left;
   transition: .7s .1s;
 }
-/* line 339, ../_states.scss */
+/* line 363, ../_states.scss */
 .scale_x_img.on {
   transform: scaleX(1);
 }
 
 /*--- 線から塗り（共通設定） ---*/
-/* line 346, ../_states.scss */
+/* line 370, ../_states.scss */
 .btn05 {
   /*線の基点とするためrelativeを指定*/
   position: relative;
@@ -1224,20 +1306,20 @@ body.loaded .loadfade {
 }
 
 /*hoverした際の、ボタンの背景とテキスト色の変更*/
-/* line 362, ../_states.scss */
+/* line 386, ../_states.scss */
 .btn05:hover {
   background: #333;
   color: #fff;
 }
 
 /*線の設定*/
-/* line 368, ../_states.scss */
+/* line 392, ../_states.scss */
 .btn05 span {
   display: block;
 }
 
 /*横線の設定*/
-/* line 373, ../_states.scss */
+/* line 397, ../_states.scss */
 .btn05::before,
 .btn05::after {
   content: "";
@@ -1252,7 +1334,7 @@ body.loaded .loadfade {
 }
 
 /*縦線の設定*/
-/* line 387, ../_states.scss */
+/* line 411, ../_states.scss */
 .btn05 span::before,
 .btn05 span::after {
   content: "";
@@ -1267,13 +1349,13 @@ body.loaded .loadfade {
 }
 
 /*hoverした際、線が縦横100%伸びる*/
-/* line 401, ../_states.scss */
+/* line 425, ../_states.scss */
 .btn05:hover::before,
 .btn05:hover::after {
   width: 100%;
 }
 
-/* line 405, ../_states.scss */
+/* line 429, ../_states.scss */
 .btn05:hover span::before,
 .btn05:hover span::after {
   height: 100%;
@@ -1281,7 +1363,7 @@ body.loaded .loadfade {
 
 /*== 左上と右下から枠線が伸びて塗りに */
 /*右下から右上へ伸びる横線*/
-/* line 413, ../_states.scss */
+/* line 437, ../_states.scss */
 .bordercircle3::after {
   right: 0;
   bottom: 0;
@@ -1289,7 +1371,7 @@ body.loaded .loadfade {
 }
 
 /*右下から右上へ伸びる縦線*/
-/* line 420, ../_states.scss */
+/* line 444, ../_states.scss */
 .bordercircle3 span::after {
   right: 0;
   bottom: 0;
@@ -1297,7 +1379,7 @@ body.loaded .loadfade {
 }
 
 /*左上から右上へ伸びる横線*/
-/* line 427, ../_states.scss */
+/* line 451, ../_states.scss */
 .bordercircle3::before {
   left: 0;
   top: 0;
@@ -1305,7 +1387,7 @@ body.loaded .loadfade {
 }
 
 /*左上から左下へ伸びる横線*/
-/* line 434, ../_states.scss */
+/* line 458, ../_states.scss */
 .bordercircle3 span::before {
   left: 0;
   top: 0;

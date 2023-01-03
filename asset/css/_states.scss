@@ -150,13 +150,37 @@ span.smoothText {
 	100% {opacity:0;}
 }
 
+@keyframes openingBg {
+	0% {transform: translateX(0);}
+	70% {transform: translateX(0);}
+	100% {
+    transform: translateX(101%);
+    visibility: hidden;
+  }
+}
+@keyframes openingContent {
+	0% {opacity: 0;filter: blur(10px);}
+  30%{opacity: 1; filter: blur(0);}
+	70% {opacity: 1;}
+	100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
 body{
   &.loaded{
     .top__mv__scroll.eachTextAnime span{ animation:text_anime_on 1.5s ease-out infinite forwards; }
     .loadfade{
-      opacity: 0;
-      visibility: hidden;
-      filter: blur(0);
+      animation:openingBg 1.7s ease forwards;
+      &_wrap {
+        animation:openingContent 1.7s ease forwards;
+      }
+    }
+    .loadfadebg{
+      animation:openingBg 1.7s .06s ease forwards;
     }
   }
 }

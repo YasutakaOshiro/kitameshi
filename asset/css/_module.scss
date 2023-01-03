@@ -244,20 +244,66 @@ $breakpoints: (
   }
 }
 
-
-.loadfade{
+.loadfadebg{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 200%;
-  z-index: 99999999;
-  height: 200vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+  height: 100vh;
   opacity: 1;
   visibility: visible;
   transition: 1s;
-  background-color: white;
-  filter: blur(30px);
+  background-color: #f2e8e2;
+}
+.loadfade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  background-color: $color01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // &::after{
+  //   content: ""; 
+  //   display: block;
+  //   position: absolute;
+  //   width: 20vw;
+  //   height: 100%;
+  //   left: -20vw;
+  //   top: 0;
+  //   background-color: white;
+  //   z-index: 0;
+  // }
+  &_wrap{
+    opacity: 0;
+  }
+  &_logo{
+    width: 15.6vw;
+    margin: 0 auto;
+    @include bkp(sp){
+      width: 49.833vw;
+    }
+  }
+  &_txt{
+    text-align: center;
+    font-size: 1.4vw;
+    color: white;
+    margin-top: 1.3vw;
+    padding-left: 1.2vw;
+    @include bkp(sp){
+      font-size: 4.2vw;
+      margin-top: 4.4vw;
+      padding-left: 4vw;
+      letter-spacing: 0.12em;
+    }
+  }
 }
 
 
