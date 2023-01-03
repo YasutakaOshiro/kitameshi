@@ -21,6 +21,7 @@
 }
 body {
     a,button,.slick-arrow{
+
         cursor: none !important;
         &:hover{
             cursor: none !important;
@@ -29,36 +30,37 @@ body {
 }
 #cursor{
     &.active{
-        position: fixed;
-        background: #fff;
-        margin: -10px 0 0 -10px;
-        z-index: 999999999;
-        pointer-events: none;
-        transition: transform 0.1s;
-        border-radius: 50%;
-        width: 52px;
-        height: 52px;
-        opacity: .5;
-        &:after{
-            opacity: 1;
+        @include bkp(pc){
+            position: fixed;
+            background: #fff;
+            margin: -10px 0 0 -10px;
+            z-index: 999999999;
+            pointer-events: none;
+            transition: transform 0.1s;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            opacity: .5;
+            &:after{
+                opacity: 1;
+            }
         }
     }
     &:after{
-        content: "CLICK";
-        color: $color02;
-        text-align: center;
-        display: block;
-        position: absolute;
-        width: max-content;
-        white-space: nowrap;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        opacity: 0;
-        font-size: 12px;
-        transition: .3s;
-        @include bkp(sp){
-            font-size: 10px;
+        @include bkp(pc){
+            content: "CLICK";
+            color: $color02;
+            text-align: center;
+            display: block;
+            position: absolute;
+            width: max-content;
+            white-space: nowrap;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            font-size: 12px;
+            transition: .3s;
         }
     }
 }
@@ -1150,6 +1152,10 @@ body {
                             display: flex;
                             padding-left: 0.286vw;
                             margin-bottom: 0.286vw;
+                            &.double{
+                                letter-spacing: 0;
+                                padding-left: 0;
+                            }
                         }
                     }
                 }
