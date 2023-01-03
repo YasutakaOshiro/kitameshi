@@ -34,8 +34,9 @@
 	line-height: 1.5;
 	letter-spacing: 2px;
 	font-weight: normal;
+	filter:drop-shadow(0px 0px 5px rgba(0 , 0 , 0 , 0.4));
 	@include bkp(sp){
-		font-size: 3.2vw;
+		font-size: 3.7vw;
 	}
 }
 
@@ -47,13 +48,14 @@
 	top: 0;
 	padding: 3.6vw 3.6vw 0;
 	@include bkp(sp){
-		padding: 8vw 8vw 0;
+		padding: 5vw 5vw 0;
 	}
 	&__logo{
 		width: 14.8vw;
+		filter:drop-shadow(0px 0px 5px rgba(0 , 0 , 0 , 0.4));
 		margin-right: 1.9vw;
 		@include bkp(sp){
-			width: 22.1vw;
+			width: 29vw;
 			margin-right: 2.5vw;
 		}
 	}

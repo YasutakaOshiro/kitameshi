@@ -11,7 +11,7 @@
     <link rel="icon" href="asset/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    <link rel="stylesheet" href="asset/css/top/style.css?20221230a">
+    <link rel="stylesheet" href="asset/css/top/style.css?202301">
     <!-- OGP設定 -->
     <meta property="og:url" content="https://kitameshi.com/special">
     <meta property="og:title" content="キタメシ｜焼肉店に特化した集客プロデューサー">
@@ -28,25 +28,26 @@
 </head>
 
 <body class="top">
+  <div id="cursor"></div>
   <div class="loadfade"></div>
     <div id="stage">
         <div class="content">
             <header class="header flx aic">
-              <a href="/" class="header__logo">
+              <a href="#top" class="header__logo">
                 <img src="asset/img/top/logo01.png" alt="キタメシ">
               </a>
               <h1 class="site_ttl">
                 焼肉店に特化した<br>集客プロデューサー
               </h1>
             </header>
+            <div class="top__contactfix">
+              <div class="top__contactfix__txt">お問い合わせ</div>
+              <a href="https://www.instagram.com/kita.gourmet/" target="_blank" class="top__contactfix__link"><img src="asset/img/top/ico_instagram01.png" alt="インスタグラム"></a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgyEz9blsQov-PytTiTHSOs8yucQIVsKhoPVnSTJz7DdfBBw/viewform" target="_blank" class="top__contactfix__link"><img src="asset/img/top/ico_mail01.png" alt="お問い合わせフォーム"></a>
+            </div>
             <div class="deco_wrap">
               <div class="deco_wrap_img"><img src="asset/img/top/img_kemuri01.png" alt="" class="pc"><img src="asset/img/top/img_kemuri01__sp.png" alt="" class="sp"></div>
               <div class="top__mv">
-                <div class="top__mv__contact">
-                  <div class="top__mv__contact__txt">CONTACT</div>
-                  <a href="https://www.instagram.com/kita.gourmet/" target="_blank" class="top__mv__contact__link"><img src="asset/img/top/ico_instagram01.png" alt="インスタグラム"></a>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgyEz9blsQov-PytTiTHSOs8yucQIVsKhoPVnSTJz7DdfBBw/viewform" target="_blank" class="top__mv__contact__link"><img src="asset/img/top/ico_mail01.png" alt="お問い合わせフォーム"></a>
-                </div>
                 <div class="top__mv__img">
                   <img src="asset/img/top/img_mv01.png" alt="" class="pc">
                   <img src="asset/img/top/img_mv01_sp.png" alt="" class="sp">
@@ -67,7 +68,7 @@
                       </span>
                     </span><br>
                     <span class="strong p01">
-                      日本が誇る和牛には、<br class="sp">知った人の心を震わせ、<br>人生を豊かにする力がある。<br class="sp">物語がある。
+                      日本が誇る和牛には、<br class="sp">知った人の心を震わせ、<br>人生を豊かにする力がある。
                     </span><br><br>
                     <span class="smoothText p02">
                       <span class="anim">
@@ -84,9 +85,7 @@
                         Instagramやブログを使った発信活動。<br>SNSコンサルや<br class="sp">店舗プロデュースといった事業活動。<br>私の活動のすべては、<br class="sp">その壮大な夢に続いていきます。
                       </span>
                     </span><br>
-                    <span class="strong p02">
-                      和牛を知る。<br class="sp">心が震える。
-                    </span><br><br>
+                    <span class="impStrong p02">和牛を知る。心が震える。</span><br><br>
                     <span class="smoothText p05">
                       <span class="anim">
                         誰よりも和牛の力を信じ、<br class="sp">誰よりも心を震わせながら、<br>その魅力を届けていくキタメシです。
@@ -117,7 +116,7 @@
                     <span class="bg_wht scr_cvr">開国する</span>
                   </h3>
                   <p class="top__vision__txtbox__txt fade_x_right">
-                    おいしい焼肉を提供しているのに、「知られていない」だけで苦しい思いをする。そんな焼肉店を減らすため、正しい情報発信で今よりもっと開かれた焼肉業界を<br class="sp">創っていきたいと考えています。
+                    おいしい焼肉を提供しているのに、「知られていない」だけで苦しい思いをする。そんな焼肉店を減らすため、正しい情報発信で、今よりもっと開かれた焼肉業界を創っていきたいと考えています。
                   </p>
                   <a href="https://kitameshi.com/blog/kitameshi_vision/" target="_blank" class="base_btn bgcentery fade_x_right"><span class="txt">ビジョンを詳しく見る</span><span class="hoverContent"><span class="hoverContent_txt"><img src="asset/img/common/ico_btn_arrow01.png" alt="▶︎"></span><span class="hoverContent_txt"><img src="asset/img/common/ico_btn_arrow01.png" alt="▶︎"></span></span></a>
                 </div>
@@ -131,7 +130,7 @@
                   <div class="top__achievement__slidearea__counter">
                     <span class="top__achievement__slidearea__counter__index">1</span> <span class="top__achievement__slidearea__counter__slash">/</span> 3
                   </div>
-                  <ul class="top__achievement__slidearea__lists" id="slider01">
+                  <ul class="top__achievement__slidearea__lists anim" id="slider01">
                     <li class="top__achievement__slidearea__lists__list flx jfc_c aic">
                       <div class="top__achievement__slidearea__lists__list__img fade_x_right">
                         <img src="asset/img/top/img_achievement01.png" alt="">
@@ -206,6 +205,7 @@
                       <h4 class="top__service__flow__flx__box__ttl">
                         <span class="top__service__flow__flx__box__ttl__index"><span class="sp">0</span>1</span>
                         ストーリーの言語化
+                        <span class="detail_box sp">詳しく見る</span>
                       </h4>
                       <p class="top__service__flow__flx__box__txt">
                         なぜ焼肉店を経営することになったのか。どんな想いでお客様と向き合っているのか。人が何かのファンになるには<br>「なぜ？」が伝わるストーリーが必要不可欠。お店の根っこにあるストーリーの言語化で永く愛されるお店の土台を築きます。
@@ -215,6 +215,7 @@
                       <h4 class="top__service__flow__flx__box__ttl">
                         <span class="top__service__flow__flx__box__ttl__index"><span class="sp">0</span>2</span>
                         集客戦略の立案・実行
+                        <span class="detail_box sp">詳しく見る</span>
                       </h4>
                       <p class="top__service__flow__flx__box__txt">
                         Instagramを中心としたWebの集客ツールを使い、ターゲットに来てもらえる仕組みをつくっていきます。<br>ターゲットの設定から発信内容の企画までワンストップで手がけることで、継続性の高い集客を実現します。
@@ -224,6 +225,7 @@
                       <h4 class="top__service__flow__flx__box__ttl">
                         <span class="top__service__flow__flx__box__ttl__index"><span class="sp">0</span>3</span>
                         <span class="pc">効果測定・改善コンサルティング</span><span class="sp">効果測定・改善策の実行</span>
+                        <span class="detail_box sp">詳しく見る</span>
                       </h4>
                       <p class="top__service__flow__flx__box__txt">
                         毎月の効果を測定し、必要に応じて実行する戦略をカスタマイズ。効果の最大化を目指します。<br>また集客ツールの運用方法などのコンサルティングを随時行うことで、契約終了後も効果を継続できる体制を整えていきます。
@@ -237,7 +239,7 @@
                       <div class="top__service__flow__flx__arrow__txt fade_x_right">平均期間<span class="num">3</span>ヶ月〜<span class="num">6</span>ヶ月</div>
                     </div>
                   </div>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgyEz9blsQov-PytTiTHSOs8yucQIVsKhoPVnSTJz7DdfBBw/viewform" target="_blank" class="top__service__flow__link fade_y">集客の相談をする</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgyEz9blsQov-PytTiTHSOs8yucQIVsKhoPVnSTJz7DdfBBw/viewform" target="_blank" class="top__service__flow__link fade_y"><span class="txt">集客の相談をする</span></a>
 
                   <div class="top__service__flow__modalbg close_modal"></div>
                   <div class="top__service__flow__modalwrap">
@@ -293,13 +295,13 @@
                         <div class="voice_list_link_img">
                           <img src="asset/img/top/img_voice01.png" alt="">
                         </div>
+                        <div class="voice_list_link_name">（株）食肉通信社取締役 山内ひろきさん</div>
                         <h3 class="voice_list_link_ttl">
                           「和牛文化発展の担い手に<br>なってほしいです。」
                         </h3>
                         <p class="voice_list_link_txt">
                           初めてキタメシさんを知った時、「こんな人がいたのか！」と驚きました。インスタグラムで紹介しているのは大阪府内の焼肉店だけ。それも有名店ではなく、知る人ぞ知るお店だけに行き続けてフォロワーが2万人を超えている。ここまで和牛に熱中しているインフルエンサーは他に知りません。一緒に和牛文化の発展に貢献していけたら嬉しいです。
                         </p>
-                        <div class="voice_list_link_name">（株）食肉通信社取締役 山内ひろきさん</div>
                         <div class="voice_list_link_btn"><span class="txt">山内さんのインタビュー記事を見る→</span></div>
                       </a>
                     </li>
@@ -308,13 +310,13 @@
                         <div class="voice_list_link_img">
                           <img src="asset/img/top/img_voice02.png" alt="">
                         </div>
+                        <div class="voice_list_link_name">焼肉きたんグループオーナー 竹下弘行さん</div>
                         <h3 class="voice_list_link_ttl">
                           「ポジティブな発信で<br>焼肉文化を<br class="pc">盛り上げてください。」
                         </h3>
                         <p class="voice_list_link_txt">
                           お店のネガティブな情報を発信していないのが素晴らしいと思います。どんなお店でも悪いところは探せば見つかります。お店側も自覚しているし、改善しなければならないとも思っている。そこわざわざ掘り下げるのではなく、魅力をピックアップしてくれているので見ていて気持ちいいです。これからも、我々焼肉店や生産者さんを応援してほしいと思います。
                         </p>
-                        <div class="voice_list_link_name">焼肉きたんグループオーナー 竹下弘行さん</div>
                         <div class="voice_list_link_btn"><span class="txt">竹下さんのインタビュー記事を見る→</span></div>
                       </a>
                     </li>
@@ -323,13 +325,13 @@
                         <div class="voice_list_link_img">
                           <img src="asset/img/top/img_voice03.png" alt="">
                         </div>
+                        <div class="voice_list_link_name">但馬牛生産 神戸うすなが牧場 碓永芳輝さん</div>
                         <h3 class="voice_list_link_ttl">
                           「ブレない信念で<br>和牛の魅力を<br class="pc">広めてほしいです。」
                         </h3>
                         <p class="voice_list_link_txt">
                           和牛に“正解”はありません。育て方、焼き方、食べ方は人によって違います。それはキタメシさんのような発信する人にとっても同じじゃないかと思います。だからこそ大切なのは「信念」があるかどうか。こういうお店を応援する。こういう生産者を応援する。確固たる信念をすでにお持ちだと思うので、引き続き、信念のもとで和牛の魅力を広めていって欲しいと思います。
                         </p>
-                        <div class="voice_list_link_name">純但馬牛うすなが牧場 碓永芳輝さん</div>
                         <div class="voice_list_link_btn"><span class="txt">碓永さんのインタビュー記事を見る→</span></div>
                       </a>
                     </li>
@@ -381,7 +383,7 @@
               </section>
             </div>
             <footer class="footer">
-              <a href="/" class="footer__link"><img src="asset/img/top/logo01.png" alt="キタメシ"></a>
+              <a href="#top" class="footer__link"><img src="asset/img/top/logo01.png" alt="キタメシ"></a>
               <ul class="linklist">
                 <li><a href="./#top__concept" class="underline">コンセプト</a></li>
                 <li><a href="#top__vision" class="underline">ビジョン</a></li>
@@ -398,7 +400,7 @@
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="asset/js/common.js?20221230"></script>
+    <script src="asset/js/common.js?202301"></script>
 </body>
 
 </html>

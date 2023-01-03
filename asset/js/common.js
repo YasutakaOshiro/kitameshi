@@ -64,6 +64,43 @@ function fixSpanTag(){
   });
 }
 
+function fixSpanTag(){
+  //spanタグを追加する
+  var element = $(".eachTextAnime");
+  element.each(function () {
+    var text = $(this).text();
+    var textbox = "";
+    text.split('').forEach(function (t, i) {
+      if (t !== " ") {
+        textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+      } else {
+        textbox += t;
+      }
+    });
+    $(this).html(textbox);
+  });
+}
+
+function impTxtSpan(){
+  //spanタグを追加する
+  $(".impStrong").each(function () {
+    var text = $(this).text();
+    var textbox = "";
+    var second = 3 ;
+    text.split('').forEach(function (t, i) {
+      if (t !== " ") {
+        // console.log(i);
+        // i = i / 10;
+        textbox += '<span style="animation-delay:' + second + 's;">' + t + '</span>';
+        second += 0.1;
+      } else {
+        textbox += t;
+      }
+    });
+    $(this).html(textbox);
+  });
+}
+
 
 //表示アニメーション
 function scrollAnimFunc() {
@@ -225,6 +262,7 @@ $(function () {
 $(window).on("load", function () {
   loadedPageFunc();
   fixSpanTag();
+  impTxtSpan();
   var w = $(window).width();
   var x = 896;
   if (w > x) {
@@ -317,6 +355,96 @@ $('#slider01').slick({
 			}
 		}
 	]
+}).slick('slickPause');;
+
+function triggerScroll(targetObj) {
+  let targetName = targetObj.attr("id"); //確認用
+  let targetFlag = false;
+  let scrollTop = $(window).scrollTop();
+  let scrollBottom = scrollTop + $(window).height();
+  let targetTop = targetObj.offset().top;
+  let targetBottom = targetTop + targetObj.height();
+　　 // ロード時の表示用
+  if (scrollBottom > targetTop && scrollTop < targetBottom) {
+      if (!targetFlag) {
+          targetObj.slick('slickPlay');
+          targetFlag = true;
+      }
+  } else {
+          targetObj.slick('slickPause');
+          targetFlag = false;
+  }
+
+  $(window).on('scroll', function () {
+      scrollTop = $(window).scrollTop();
+      scrollBottom = scrollTop + $(window).height();
+      targetTop = targetObj.offset().top;
+      targetBottom = targetTop + targetObj.height();
+      if (scrollBottom > targetTop && scrollTop < targetBottom) {
+        // スクロール位置に来たときにautoplayを開始
+        if (!targetFlag) {
+            console.log(targetName + ' is in sight');//確認用
+            targetObj.slick('slickPlay');
+            targetFlag = true;
+        }
+      } else {
+        // 見えなくなったらautoplayを停止
+        if (targetFlag) {
+            console.log(targetName + ' is not in sight');//確認用
+            targetObj.slick('slickPause');
+            targetFlag = false;
+        }
+      }
+  });
+}
+triggerScroll($('#slider01'));
+
+$(function(){
+	
+	//カーソル要素の指定
+	var cursor=$("#cursor");
+	
+	//mousemoveイベントでカーソル要素を移動させる
+	$(document).on("mousemove",function(e){
+    //カーソルの座標位置を取得
+		var x=e.clientX;
+		var y=e.clientY;
+		//カーソル要素のcssを書き換える用
+		cursor.css({
+			"opacity":"0.9",
+			"top":y+"px",
+			"left":x+"px"
+		});
+  });
+
+	//aタグホバー
+	$("a , button , .slick-arrow").on({
+		"mouseenter": function() {
+			//activeクラス付与
+			cursor.addClass("active");
+		},
+		"mouseleave": function() {
+			cursor.removeClass("active");
+		}
+	});
+});
+
+$(function(){
+  let n = 0;
+  var toggleDetail = function (){
+    var w = $(window).width();
+    if (w < 896) {
+      $('.top__service__flow__flx__box').removeClass('detail');
+      $('.top__service__flow__flx__box').eq(n).toggleClass('detail');
+      console.log(n);
+      if(n < 2){
+        n = n + 1;
+      }else{
+        n = 0;
+      }
+    }
+  }
+  setInterval(toggleDetail,2500);
 });
 
 var w = $(window).width();
